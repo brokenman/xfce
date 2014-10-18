@@ -1,0 +1,224 @@
+# Esperanto translation for PolicyKit-gnome.
+# Copyright (C) 2011 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PolicyKit-gnome package.
+# Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-05-05 23:03+0000\n"
+"PO-Revision-Date: 2011-06-04 16:25+0200\n"
+"Last-Translator: Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>\n"
+"Language-Team: Esperanto <ubuntu-l10n-eo@lists.launchpad.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../polkitgtk/polkitlockbutton.c:458
+msgid "Action Identifier"
+msgstr "Ago-identigilo"
+
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "Estas rajtigite"
+
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "Estas videble"
+
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "Ĉu la fenestraĵo estu videbla?"
+
+#: ../polkitgtk/polkitlockbutton.c:507
+msgid "Can Obtain"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:525
+msgid "Click to make changes"
+msgstr "Klaki por fari ŝanĝojn"
+
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:559
+msgid "Click to prevent changes"
+msgstr "Klaki por preventi ŝanĝojn"
+
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:626
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:627
+msgid "Not authorized to make changes"
+msgstr "Ne rajtigite por fari ŝanĝojn"
+
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr "Sistempolitiko preventas ŝanĝojn. Kontaktu vian sistemadministranton"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Elekti uzanton..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "_Aŭtentigi"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
+msgid "_Password:"
+msgstr "_Pasvorto:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_Detaloj</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Ago:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "Klaki por redakti %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Vendisto:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "Klaki por malfermi %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "Aŭtentigi"
+
+#: ../src/polkitgnomeauthenticator.c:297
+#, c-format
+msgid "_Password for %s:"
+msgstr "_Pasvorto por %s:"
+
+#: ../src/polkitgnomeauthenticator.c:457
+msgid "Authentication Failure"
+msgstr "Autentigo fiaskis."
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "La dialogo de la aŭtentokontrolo fermiĝitis de la uzanto"

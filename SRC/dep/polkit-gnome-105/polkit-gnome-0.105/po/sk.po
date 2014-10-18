@@ -1,0 +1,258 @@
+# Slovak translation for PolicyKit-gnome.
+# Copyright (C) 2008, 2009, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PolicyKit-gnome package.
+# Pavol Šimo <palo.simo@gmail.com>, 2008, 2009, 2010, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&component=general\n"
+"POT-Creation-Date: 2011-03-03 18:50+0000\n"
+"PO-Revision-Date: 2011-04-26 14:52+0200\n"
+"Last-Translator: Pavol Šimo <palo.simo@gmail.com>\n"
+"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../polkitgtk/polkitlockbutton.c:458
+msgid "Action Identifier"
+msgstr "Identifikátor akcie"
+
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr "Identifikátor akcie, ktorý sa použije pre tlačidlo"
+
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "Je oprávnený"
+
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr "Či je proces oprávnený"
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "Je viditeľný"
+
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "Či je ovládací prvok viditeľný"
+
+#: ../polkitgtk/polkitlockbutton.c:507
+msgid "Can Obtain"
+msgstr "Môže získať"
+
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr "Či môže byť oprávnenie získané"
+
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr "Text odomknutia"
+
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr "Text, ktorý sa zobrazí pri výzve používateľa na odomknutie."
+
+# text z gnome-control-center
+#: ../polkitgtk/polkitlockbutton.c:525
+msgid "Click to make changes"
+msgstr "Kliknutím povolíte zmeny"
+
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "Bublinový popis odomknutia"
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "Bublinový popis, ktorý sa zobrazí pri výzve používateľa na odomknutie."
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "Na vykonanie zmien je potrebné overenie totožnosti."
+
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr "Text uzamknutia"
+
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr "Text, ktorý sa zobrazí pri výzve používateľa na uzamknutie."
+
+#: ../polkitgtk/polkitlockbutton.c:559
+msgid "Click to prevent changes"
+msgstr "Kliknite, aby sa zamedzilo zmenám"
+
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "Bublinový popis uzamknutia"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "Bublinový popis, ktorý sa zobrazí pri výzve používateľa na uzamknutie."
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "Na zamedzenie ďalších zmien kliknite na zámok."
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr "Text zamedzenia"
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr ""
+"Text, ktorý sa zobrazí pri výzve používateľa na zamedzenie akcie pre "
+"všetkých používateľov."
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr "Kliknite, aby sa vykonalo zamedzenie"
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr "Bublinový popis zamedzenia"
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr ""
+"Bublinový popis, ktorý sa zobrazí pri výzve používateľa na zamedzenie akcie "
+"pre všetkých používateľov."
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr ""
+"Na zabránenie vykonania zmien používateľmi bez správcovských práv kliknite "
+"na zámok."
+
+#: ../polkitgtk/polkitlockbutton.c:626
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Text, ktorý sa zobrazí, keď používateľ nemôže získať oprávnenie pomocou "
+"overenia totožnosti."
+
+#: ../polkitgtk/polkitlockbutton.c:627
+msgid "Not authorized to make changes"
+msgstr "Na vykonanie zmien nemáte oprávnenie"
+
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Bublinový popis, ktorý sa zobrazí, keď používateľ nemôže získať oprávnenie "
+"pomocou overenia totožnosti."
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr ""
+"Systémová politika nepovoľuje zmeny. Kontaktujte správcu vášho systému."
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Vybrať používateľa..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "_Overiť totožnosť"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
+"akcie je vyžadované overenie totožnosti niektorého z uvedených používateľov."
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
+"akcie je vyžadované overenie totožnosti."
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
+"akcie je vyžadované overenie totožnosti superpoužívateľa."
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
+msgid "_Password:"
+msgstr "_Heslo:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>Po_drobnosti</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Akcia:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "Kliknutím upravíte %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Dodávateľ:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "Kliknutím otvoríte %s"
+
+# toto je titulok okna, tam nedávame neurčitok
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "Overenie totožnosti"
+
+#: ../src/polkitgnomeauthenticator.c:297
+#, c-format
+msgid "_Password for %s:"
+msgstr "_Heslo používateľa %s:"
+
+# toto je status overenia - tento slovosled tam pasuje viac
+#: ../src/polkitgnomeauthenticator.c:457
+msgid "Authentication Failure"
+msgstr "Overenie totožnosti zlyhalo"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "Dialógové okno overenia totožnosti bolo zatvorené používateľom"
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "Kliknite na ikonu, aby sa zahodili zvýšené práva"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "Agent PolicyKit na overovanie totožnosti"
+
+# Veď to, že "right-click" neobsahuje v sebe "button"... Skúsim to takto
+#~ msgid ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+#~ msgstr ""
+#~ "Toto tlačidlo je obmedzené tak, že len používatelia so správcovskými "
+#~ "právami ho môžu odomknúť. Na odstránenie obmedzenia tlačidla naň kliknite "
+#~ "pravým tlačidlom myši."

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=USM
+GenericName=Porteus Package Manager
+Comment=Unified Slackware Package Manager
+Exec=/opt/porteus-scripts/xorg/psu /usr/bin/usmgui
+Terminal=false
+Icon=cdr.png
+Type=Application
+Categories=System;
+Version=1.0
+X-XFCE-Source=file:///usr/share/applications/usm.desktop

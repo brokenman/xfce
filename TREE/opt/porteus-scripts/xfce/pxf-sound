@@ -1,0 +1,124 @@
+#!/bin/bash
+
+# script by Ahau <ahau@porteus.org>
+# script to change the volume in Porteus-XFCE
+# channel is tied to the selected channel in volumeicon, so this requires retrovol (unless you only want to change Master Volume)
+
+#some user editable variables:
+
+#change to 0 if you don't want gtkdialog gui box
+show_gui=1
+
+#change icons...
+activeicon=/opt/porteus-scripts/xfce/icons/audio-volume-high.svg
+muteicon=/opt/porteus-scripts/xfce/icons/audio-volume-muted.svg
+
+# This will search the retrovol configs for the specified volume channel
+# this file will not exist unless the user reconfigures retrovol, so it defaults to Master Playback Volume
+# if ~/retrovolrc is not found.
+
+virc=~/.config/volumeicon/volumeicon
+
+if [ -e $virc ]; then
+  step=`grep stepsize $virc |cut -d '=' -f2`
+  vol_channel=`grep ^channel= $virc | cut -d '=' -f2`
+fi
+
+[ ! $step ] && step=5
+[ ! $vol_channel ] && vol_channel='Master'
+
+export vol_channel
+export step
+
+if [ "$1" = "up" ]; then
+  amixer set $vol_channel $step%+
+fi
+
+if [ "$1" = "down" ]; then
+  amixer set $vol_channel $step%-
+fi
+
+if [ "$1" = "toggle" ]; then  
+  amixer set $vol_channel toggle
+fi
+
+# the rest will only be executed if the user wants to show the gtkdialog volume box
+if [ "$show_gui" = "1" ]; then
+
+  vol_level=`amixer get $vol_channel|tail -n1| sed -r 's/.*\[(.*)%\].*/\1/'`
+  echo $vol_level > /tmp/.pxf-volume
+
+  unset sound_off
+  sound_off=`amixer get $vol_channel|tail -n1| grep '\[off\]'`
+  if [ "$sound_off" ]; then
+    mute=\(muted\)
+    vicon=$muteicon
+    export mute
+  else
+    vicon=$activeicon
+  fi
+  export vicon
+
+  find_level (){
+    vol_level=`amixer get $vol_channel|tail -n1| sed -r 's/.*\[(.*)%\].*/\1/'`
+    export vol_level
+  }
+
+  export PXF_DIALOG='
+  <window accept_focus="false" decorated="false" skip_taskbar_hint="true" window_position="1">
+  <hbox>
+        <pixmap> <width>24</width><height>24</height>
+            <input file>'$vicon'</input>
+        </pixmap>
+        <progressbar>
+            <label>Volume '`echo $mute`'</label>
+            <input>while [ "$M" != "100" ]; do M=`cat /tmp/.pxf-volume`; echo $M; sleep .125; done;</input>
+	    <action type="exit">Ready</action>
+        </progressbar>
+
+    </hbox>
+   </window>
+  '
+
+  show_volume (){
+  p=0
+
+  gtkdialog --program=PXF_DIALOG &
+
+  while [ "$p" -lt "12" ]; do
+    vol_status=`amixer get $vol_channel|tail -n1` 
+    find_level
+    if [ "$vol_level" = 100 ]; then
+      vol_level=99.5
+    fi
+    if [ "$vol_status" != "$vol_check" ]; then
+      p=0
+    fi
+    echo $vol_level > /tmp/.pxf-volume
+    vol_check=$vol_status
+    sleep .125
+    p=$(( p + 1 ));
+    done
+  echo 100 > /tmp/.pxf-volume
+  }
+
+
+  if [ "$1" = "toggle" ]; then  
+    old_pid=`ps aux |grep PXF_DIALOG |grep -v grep|cut -d ' ' -f6,7|sed 's/ //g'`
+    [ "$old_pid" ] && kill $old_pid
+    show_volume
+  fi
+
+  if [ "$1" = "up" ]; then 
+    if [ ! `ps aux | grep -v grep |grep PXF_DIALOG` ]; then
+      show_volume
+    fi
+  fi
+
+  if [ "$1" = "down" ]; then 
+    if [ ! `ps aux | grep -v grep |grep PXF_DIALOG` ]; then
+      show_volume
+    fi
+  fi
+
+fi

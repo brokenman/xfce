@@ -1,0 +1,28 @@
+#!/bin/bash
+# This script turns on or off compositing in XFCE.  
+# Author:  Ahau <Ahau@porteus.org>
+
+if [ "$1" = "on" ]; then
+
+  sed -i 's/property name="use_compositing" type="bool" value="false"/property name="use_compositing" type="bool" value="true"/g' /root/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+  for user in `ls /home/`; do
+    if [ -e /home/$user/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml ]; then
+      sed -i 's/property name="use_compositing" type="bool" value="false"/property name="use_compositing" type="bool" value="true"/g' /home/$user/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+    fi ;
+  done    
+
+fi
+ 
+if [ "$1" = "off" ]; then
+
+  sed -i 's/property name="use_compositing" type="bool" value="true"/property name="use_compositing" type="bool" value="false"/g' /root/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+  for user in `ls /home/`; do
+    if [ -e /home/$user/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml ]; then
+      sed -i 's/property name="use_compositing" type="bool" value="true"/property name="use_compositing" type="bool" value="false"/g' /home/$user/.config/xfce4/xfconf/xfce-perchannel-xml/xfwm4.xml
+    fi ;
+  done  
+   
+fi
+
+
+

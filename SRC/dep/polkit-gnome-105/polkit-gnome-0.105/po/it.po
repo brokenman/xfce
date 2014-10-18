@@ -1,0 +1,216 @@
+# Italian translation of policykit-gnome.
+# Copyright (C) 2008 Free Software Foundation, Inc.
+# This file is distributed under the same license as the policykit-gnome package.
+# Gianvito Cavasoli <gianvito@gmx.it>, 2008, 2009, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: policykit-gnome 0.9\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-09-15 15:33+0000\n"
+"PO-Revision-Date: 2011-09-24 15:06+0200\n"
+"Last-Translator: Gianvito Cavasoli <gianvito@gmx.it>\n"
+"Language-Team: Italiana <tp@lists.linux.it>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Seleziona utente..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "_Autentica"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Un'applicazione sta tentando di compiere un'azione che richiede dei "
+"privilegi. È richiesto autenticarsi come uno degli utenti elencati sotto per "
+"eseguire tale azione."
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Un'applicazione sta tentando di compiere un'azione che richiede dei "
+"privilegi. È richiesto autenticarsi per eseguire tale azione."
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Un'applicazione sta tentando di compiere un'azione che richiede dei "
+"privilegi. È richiesto autenticarsi come super utente per eseguire tale "
+"azione."
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:300
+msgid "_Password:"
+msgstr "Pass_word:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_Dettagli</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Azione:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "Fare clic per modificare %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Fornitore:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "Fare clic per aprire %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "Autentica"
+
+#: ../src/polkitgnomeauthenticator.c:296
+#, c-format
+msgid "_Password for %s:"
+msgstr "Pass_word per %s:"
+
+#: ../src/polkitgnomeauthenticator.c:456
+msgid "Authentication Failure"
+msgstr "Autenticazione non riuscita"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "Il dialogo di autenticazione è stato annullato dall'utente"
+
+#~ msgid "Action Identifier"
+#~ msgstr "Identificatore di azione"
+
+#~ msgid "The action identifier to use for the button"
+#~ msgstr "Identificatore di azione da utilizzare per il pulsante"
+
+#~ msgid "Is Authorized"
+#~ msgstr "È autorizzato"
+
+#~ msgid "Whether the process is authorized"
+#~ msgstr "Indica se il processo è autorizzato"
+
+#~ msgid "Is Visible"
+#~ msgstr "È visibile"
+
+#~ msgid "Whether the widget is visible"
+#~ msgstr "Indica se il widget è visibile"
+
+#~ msgid "Can Obtain"
+#~ msgstr "Può ottenere"
+
+#~ msgid "Whether authorization can be obtained"
+#~ msgstr "Indica se l'autorizzazione può essere ottenuta"
+
+#~ msgid "Unlock Text"
+#~ msgstr "Testo di sblocco"
+
+#~ msgid "The text to display when prompting the user to unlock."
+#~ msgstr "Il testo da mostrare quando si chiede all'utente di sbloccare."
+
+#~ msgid "Click to make changes"
+#~ msgstr "Fare clic per apportare le modifiche"
+
+#~ msgid "Unlock Tooltip"
+#~ msgstr "Suggerimento di sblocco"
+
+#~ msgid "The tooltip to display when prompting the user to unlock."
+#~ msgstr ""
+#~ "Il suggerimento da mostrare quando si chiede all'utente di sbloccare."
+
+#~ msgid "Authentication is needed to make changes."
+#~ msgstr "È necessaria l'autenticazione per apportare modifiche."
+
+#~ msgid "Lock Text"
+#~ msgstr "Testo di blocco"
+
+#~ msgid "The text to display when prompting the user to lock."
+#~ msgstr "Il testo da mostrare quando si chiede all'utente di bloccare."
+
+#~ msgid "Click to prevent changes"
+#~ msgstr "Fare clic per impedire le modifiche"
+
+#~ msgid "Lock Tooltip"
+#~ msgstr "Suggerimento di blocco"
+
+#~ msgid "The tooltip to display when prompting the user to lock."
+#~ msgstr ""
+#~ "Il suggerimento da mostrare quando si chiede all'utente di bloccare."
+
+#~ msgid "To prevent further changes, click the lock."
+#~ msgstr "Per impedire ulteriori modifiche, fare clic sul blocco."
+
+#~ msgid "Lock Down Text"
+#~ msgstr "Testo di blocco permanente"
+
+#~ msgid ""
+#~ "The text to display when prompting the user to lock down the action for "
+#~ "all users."
+#~ msgstr ""
+#~ "Il testo da mostrare quando si chiede all'utente di bloccare "
+#~ "permanentemente l'azione per tutti gli utenti."
+
+#~ msgid "Click to lock down"
+#~ msgstr "Fare clic per bloccare permanentemente"
+
+#~ msgid "Lock Down Tooltip"
+#~ msgstr "Suggerimento di blocco permanente"
+
+#~ msgid ""
+#~ "The tooltip to display when prompting the user to lock down the action "
+#~ "for all users."
+#~ msgstr ""
+#~ "Il suggerimento da mostrare quando si chiede all'utente di bloccare "
+#~ "permanentemente l'azione per tutti gli utenti."
+
+#~ msgid ""
+#~ "To prevent users without administrative privileges from making changes, "
+#~ "click the lock."
+#~ msgstr ""
+#~ "Per impedire agli utenti senza privilegi amministrativi di apportare "
+#~ "modifiche, fare clic sul blocco."
+
+#~ msgid ""
+#~ "The text to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "Il testo da mostrare quando l'utente non può ottenere l'autorizzazione "
+#~ "tramite l'autenticazione."
+
+#~ msgid "Not authorized to make changes"
+#~ msgstr "Non autorizzato per apportare modifiche"
+
+#~ msgid ""
+#~ "The tooltip to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "Il suggerimento da mostrare quando l'utente non può ottenere "
+#~ "l'autorizzazione tramite l'autenticazione."
+
+#~ msgid "System policy prevents changes. Contact your system administator."
+#~ msgstr ""
+#~ "Le politiche del sistema impediscono le modifiche. Contattare "
+#~ "l'amministratore di sistema."

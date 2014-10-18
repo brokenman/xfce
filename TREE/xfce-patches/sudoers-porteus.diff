@@ -1,0 +1,23 @@
+--- a/etc/sudoers	2013-05-17 01:53:51.000000000 +0000
++++ b/etc/sudoers	2013-12-09 21:16:12.000000000 +0000
+@@ -61,6 +61,7 @@
+ # Defaults!/usr/bin/sudoreplay !log_output
+ # Defaults!/usr/local/bin/sudoreplay !log_output
+ # Defaults!/sbin/reboot !log_output
++Defaults rootpw
+ 
+ ##
+ ## Runas alias specification
+@@ -70,6 +71,7 @@
+ ## User privilege specification
+ ##
+ root ALL=(ALL) ALL
++guest ALL=(ALL) ALL
+ 
+ ## Uncomment to allow members of group wheel to execute any command
+ # %wheel ALL=(ALL) ALL
+@@ -88,3 +90,4 @@
+ ## Read drop-in files from /etc/sudoers.d
+ ## (the '#' here does not indicate a comment)
+ #includedir /etc/sudoers.d
++## Restrictions applied to sudo

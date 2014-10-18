@@ -1,0 +1,6 @@
+#!/bin/sh
+#script by Ahau
+
+browser=`which firefox 2>/dev/null || which midori 2>/dev/null`
+
+exec $browser $1 &

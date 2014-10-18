@@ -1,0 +1,4 @@
+exo >= 0.5.4
+libxfce4ui >= 4.7.4
+libwnck >= 2.30.5
+xfconf >= 4.7.3

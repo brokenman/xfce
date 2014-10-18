@@ -1,0 +1,77 @@
+#!/bin/bash
+## Script to check md5sum on clipboard against chosen file
+## Author: brokenman <brokenman@porteus.org>
+
+. /usr/lib/librokenman
+
+file=$1
+PIXMAPS=/usr/share/pixmaps/porteus
+
+## First time running?
+if [ ! -f $HOME/.clipsum ]; then
+echo '
+'`start_window "Clipboard Checksum" $PIXMAPS/binary.png 495`'
+<hbox>
+	'`pixmapfile 48 48 $PIXMAPS/binary.png`'
+	'`txtcolor 420 darkred x-large normal "Clipboard checksum checker"`'
+</hbox>
+<frame>
+'`txtmarkup 480 "When downloading file from the internet, there is often a checksum included to verify the integrity of the downloaded file. Simply copy this checksum to your clipboard and then right click on the downloaded file and choose the checksum option."`'
+'`txtmarkup 480 " "`'
+'`txtmarkup 480 "This application supports md5, sha1, sha224, sha256, sha384 &amp; sha512 checksums"`'
+</frame>
+'`chkbox false clsum "Do not show this window again."`'
+	<action>if true touch $HOME/.clipsum</action>
+</checkbox>
+<hbox>
+	'`butok`'
+</hbox>
+'`end_window`'
+'|gtkdialog -s
+fi
+
+[ -z "$file" ] && { gtk_message "You must supply a file to check" 350 gtk-dialog-error; exit; }
+
+cb=`xclip -o|tr -d [:punct:]|grep -v [g-z]`
+
+## Clipboard populated?
+[ "$cb" == "" ] && { gtk_message "There is nothing on the clipboard!" 350 gtk-dialog-error; exit; }
+
+## Valid checksum?
+if [ `wc -c <<<$cb` -lt 32 ]; then
+  gtk_message "This is not a valid checksum!" 350 gtk-dialog-error
+  exit
+fi
+
+## Sniff checksum on clipboard
+case `wc -c <<<$cb` in
+33 )
+export cbsum=md5
+fsum=`md5sum $file|awk '{print$1}'` ;;
+41 )
+export cbsum=sha1 
+fsum=`sha1sum $file|awk '{print$1}'` ;;
+57 )
+export cbsum=sha224 
+fsum=`sha224sum $file|awk '{print$1}'` ;;
+65 )
+export cbsum=sha256 
+fsum=`sha256sum $file|awk '{print$1}'` ;;
+97 )
+export cbsum=sha384
+fsum=`sha384sum $file|awk '{print$1}'` ;;
+129 )
+export cbsum=sha512
+fsum=`sha512sum $file|awk '{print$1}'` ;;
+* )
+echo $cb|wc -c
+export cbsum=invalid
+gtk_message "Only md5, sha1, sha224, sha256, sha384 & sha512 checksums are supported!" 450 gtk-dialog-error &
+exit
+esac
+
+if [ "$cb" == "$fsum" ]; then
+  gtk_message "SUCCESSS! The $cbsum checksum on the clipboard matches the chosen file!" 400 gtk-yes
+    else
+  gtk_message "ERROR: The $cbsum  DO NOT match!" 400 gtk-dialog-error
+fi

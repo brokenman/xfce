@@ -1,0 +1,224 @@
+# Turkish translation for PolicyKit-gnome.
+# Copyright (C) 2011 PolicyKit-gnome's COPYRIGHT HOLDER
+# This file is distributed under the same license as the PolicyKit-gnome package.
+# Muhammet Kara <muhammet.k@gmail.com>, 2011.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-04-26 13:10+0000\n"
+"PO-Revision-Date: 2011-05-06 01:59+0300\n"
+"Last-Translator: Muhammet Kara <muhammet.k@gmail.com>\n"
+"Language-Team: Turkish <gnome-turk@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../polkitgtk/polkitlockbutton.c:458
+msgid "Action Identifier"
+msgstr "Eylem Tanıtıcı"
+
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr "Düğme için kullanılacak eylem tanıtıcısı"
+
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "Yetkilendirilmiş"
+
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr "İşlemin yetkilendirilmiş olup olmadığı"
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "Görünür"
+
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "Parçanın görünür olup olmaması"
+
+#: ../polkitgtk/polkitlockbutton.c:507
+msgid "Can Obtain"
+msgstr "Alınabilir"
+
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr "Yetki alınıp alınamayacağı"
+
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr "Kilit Açma Metni"
+
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr "Kullanıcıya kilit açma isteği gösterilirken görüntülenecek metin."
+
+#: ../polkitgtk/polkitlockbutton.c:525
+msgid "Click to make changes"
+msgstr "Değişiklik yapmak için tıklayın"
+
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "Kilit Açma İpucu"
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "Kullanıcıya kilit açma isteği gösterilirken görüntülenecek ipucu."
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "Değişiklik yapabilmek için kimlik doğrulaması gerekiyor."
+
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr "Kilitleme Metni"
+
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr "Kullanıcıya kilitleme isteği gösterilirken görüntülenecek metin."
+
+#: ../polkitgtk/polkitlockbutton.c:559
+msgid "Click to prevent changes"
+msgstr "Değişiklikleri engellemek için tıklayın"
+
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "Kilitleme İpucu"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "Kullanıcıya kilitleme isteği gösterilirken görüntülenecek ipucu."
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "Daha sonra değişiklik yapılmasını engellemek için kilide tıklayın."
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:626
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:627
+msgid "Not authorized to make changes"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Kullanıcı seç..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "_Kimlik Doğrula"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
+msgid "_Password:"
+msgstr "_Parola:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_Ayrıntılar</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Eylem:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "%s'i düzenlemek için tıklayın"
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Satıcı:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "%s'i açmak için tıklayın"
+
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "Kimlik Doğrula"
+
+#: ../src/polkitgnomeauthenticator.c:297
+#, c-format
+msgid "_Password for %s:"
+msgstr "%s için _parola:"
+
+#: ../src/polkitgnomeauthenticator.c:457
+msgid "Authentication Failure"
+msgstr "Kimlik Doğrulama Başarısız"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "Kimlik doğrulama penceresi kullanıcı tarafından kapatıldı"

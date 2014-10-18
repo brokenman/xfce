@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="thunar-volman" version="1.0">
+  <property name="autoburn" type="empty">
+    <property name="data-cd-command" type="string" value="/usr/bin/xfburn"/>
+    <property name="enabled" type="bool" value="true"/>
+  </property>
+  <property name="autoprinter" type="empty">
+    <property name="command" type="string" value="/usr/bin/xdg-open http://localhost:631/admin"/>
+  </property>
+</channel>

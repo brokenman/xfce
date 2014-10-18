@@ -1,0 +1,251 @@
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# Aviary.pl
+# Jeśli masz jakiekolwiek uwagi odnoszące się do tłumaczenia lub chcesz
+# pomóc w jego rozwijaniu i pielęgnowaniu, napisz do nas:
+# gnomepl@aviary.pl
+# -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2011-09-01 02:32+0200\n"
+"PO-Revision-Date: 2011-09-01 02:33+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
+"Language-Team: Polish <gnomepl@aviary.pl>\n"
+"Language: pl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2);\n"
+"X-Poedit-Language: Polish\n"
+"X-Poedit-Country: Poland\n"
+
+#: ../polkitgtk/polkitlockbutton.c:458
+msgid "Action Identifier"
+msgstr "Identyfikator czynności"
+
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr "Identyfikator czynności do użycia dla przycisku"
+
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "Jest upoważniony"
+
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr "Określa, czy proces jest upoważniony"
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "Jest widoczny"
+
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "Określa, czy widget jest widoczny"
+
+#: ../polkitgtk/polkitlockbutton.c:507
+msgid "Can Obtain"
+msgstr "Może uzyskać"
+
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr "Określa, czy można uzyskać upoważnienie"
+
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr "Tekst odblokowania"
+
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr "Tekst do wyświetlenia, gdy użytkownik jest proszony o odblokowanie."
+
+#: ../polkitgtk/polkitlockbutton.c:525
+msgid "Click to make changes"
+msgstr "Kliknięcie dokona zmian"
+
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "Tekst podpowiedzi odblokowania"
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr ""
+"Tekst podpowiedzi do wyświetlenia, gdy użytkownik jest proszony o "
+"odblokowanie."
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "Wymagane jest uwierzytelnienie, aby dokonać zmiany."
+
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr "Tekst zablokowania"
+
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr "Tekst do wyświetlenia, gdy użytkownik jest proszony o zablokowanie."
+
+#: ../polkitgtk/polkitlockbutton.c:559
+msgid "Click to prevent changes"
+msgstr "Kliknięcie zapobiegnie zmianom"
+
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "Tekst podpowiedzi zablokowania"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr ""
+"Tekst podpowiedzi do wyświetlenia, gdy użytkownik jest proszony o "
+"zablokowanie."
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "Aby powstrzymać dalsze zmiany, należy kliknąć blokadę."
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr "Tekst zablokowania"
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr ""
+"Tekst do wyświetlenia, gdy użytkownik jest proszony o zablokowanie czynności "
+"dla wszystkich użytkowników."
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr "Kliknięcie zablokuje"
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr "Tekst podpowiedzi zablokowania"
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr ""
+"Tekst podpowiedzi do wyświetlenia, gdy użytkownik jest proszony o "
+"zablokowanie czynności dla wszystkich użytkowników."
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr ""
+"Aby powstrzymać użytkowników bez uprawnień administracyjnych przed "
+"dokonaniem zmian, należy kliknąć blokadę."
+
+#: ../polkitgtk/polkitlockbutton.c:626
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Tekst do wyświetlenia, gdy użytkownik nie może uzyskać upoważnienia przez "
+"uwierzytelnienie."
+
+#: ../polkitgtk/polkitlockbutton.c:627
+msgid "Not authorized to make changes"
+msgstr "Brak upoważnienia do dokonania zmian"
+
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Tekst podpowiedzi do wyświetlenia, gdy użytkownik nie może uzyskać "
+"upoważnienia przez uwierzytelnienie."
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr ""
+"Polityka systemu powstrzymuje zmiany. Proszę skontaktować się z "
+"administratorem systemu."
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Wybór użytkownika..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "_Uwierzytelnij"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Program próbuje dokonać działania wymagającego upoważnienia. Aby dokonać "
+"tego działania wymagane jest uwierzytelnienie jako jeden z poniższych "
+"użytkowników."
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Program próbuje dokonać działania wymagającego upoważnienia. Aby dokonać "
+"tego działania wymagane jest uwierzytelnienie."
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Program próbuje dokonać działania wymagającego upoważnienia. Aby dokonać "
+"tego działania wymagane jest uwierzytelnienie jako administrator."
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
+msgid "_Password:"
+msgstr "_Hasło:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>S_zczegóły</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Działanie:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "Kliknięcie otworzy %s do modyfikacji"
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Dostawca:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "Kliknięcie otworzy %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "Uwierzytelnianie"
+
+#: ../src/polkitgnomeauthenticator.c:297
+#, c-format
+msgid "_Password for %s:"
+msgstr "_Hasło użytkownika %s:"
+
+#: ../src/polkitgnomeauthenticator.c:457
+msgid "Authentication Failure"
+msgstr "Błąd uwierzytelniania"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "Okno dialogowe uwierzytelnienia zostało odrzucone przez użytkownika"

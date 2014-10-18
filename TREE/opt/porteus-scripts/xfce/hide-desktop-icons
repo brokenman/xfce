@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Script to hide the default porteus icons to avoid
+# duplicates on the XFCE desktop.
+# Author:  Ahau <ahau@porteus.org>
+
+
+if [ -e ~/Desktop/Home.desktop ]; then
+   if ! egrep -woq XFCE ~/Desktop/Home.desktop; then
+      echo "" >> ~/Desktop/Home.desktop
+      echo "NotShowIn=XFCE;" >> ~/Desktop/Home.desktop
+   fi
+fi
+
+if [ -e ~/Desktop/System.desktop ]; then
+   if ! egrep -woq XFCE ~/Desktop/System.desktop; then
+      echo "" >> ~/Desktop/System.desktop
+      echo "NotShowIn=XFCE;" >> ~/Desktop/System.desktop
+   fi
+fi

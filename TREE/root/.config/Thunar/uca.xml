@@ -1,0 +1,94 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1406920422374566-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>accessories-text-editor</icon>
+	<name>Pastebin upload</name>
+	<unique-id>1406927056018830-1</unique-id>
+	<command>/opt/porteus-scripts/context-menu/pastebin %f</command>
+	<description>Upload a text file to pastebin</description>
+	<patterns>*</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon>cdr</icon>
+	<name>Extract module</name>
+	<unique-id>1406927163866770-2</unique-id>
+	<command>/opt/porteus-scripts/context-menu/extract-module %F</command>
+	<description>Extract porteus module</description>
+	<patterns>*.xzm</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>cdr</icon>
+	<name>Create module</name>
+	<unique-id>1406927334521790-3</unique-id>
+	<command>/opt/porteus-scripts/context-menu/create-module %f</command>
+	<description>Create a porteus module from a folder</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>start-here-debian</icon>
+	<name>deb2xzm</name>
+	<unique-id>1406927432353616-4</unique-id>
+	<command>/opt/porteus-scripts/context-menu/convert_deb %f</command>
+	<description>Convert a debian archive to a porteus module</description>
+	<patterns>*.deb</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>start-here-slackware</icon>
+	<name>txz2xzm</name>
+	<unique-id>1406927847266624-10</unique-id>
+	<command>/opt/porteus-scripts/context-menu/convert_txz %F</command>
+	<description>Convert slackware package to porteus module</description>
+	<patterns>*.txz;*.tgz</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>usmslackware</icon>
+	<name>Install package</name>
+	<unique-id>1406927831728030-9</unique-id>
+	<command>/opt/porteus-scripts/context-menu/install-slack %F</command>
+	<description>Install slackware package</description>
+	<patterns>*.txz;*.tgz</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>media-cdr</icon>
+	<name>Mount ISO</name>
+	<unique-id>1406927813307622-8</unique-id>
+	<command>/opt/porteus-scripts/context-menu/mount-iso %f</command>
+	<description>Mount an ISO file</description>
+	<patterns>*.iso;*.img</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>cdr</icon>
+	<name>Mount module</name>
+	<unique-id>1406927895129246-11</unique-id>
+	<command>/opt/porteus-scripts/context-menu/mount-module %f</command>
+	<description>Mount module read only</description>
+	<patterns>*.xzm</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>usmslackware</icon>
+	<name>Remove slack</name>
+	<unique-id>1406927953138467-12</unique-id>
+	<command>/opt/porteus-scripts/context-menu/remove-slack %f</command>
+	<description>Uninstall slackware package</description>
+	<patterns>*.txz;*.tgz</patterns>
+	<other-files/>
+</action>
+</actions>

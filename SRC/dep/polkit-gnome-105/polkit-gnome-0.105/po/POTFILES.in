@@ -1,0 +1,7 @@
+# List of source files containing translatable strings.
+# Please keep this file sorted alphabetically.
+[encoding: UTF-8]
+src/main.c
+src/polkitgnomeauthenticationdialog.c
+src/polkitgnomeauthenticator.c
+src/polkitgnomelistener.c

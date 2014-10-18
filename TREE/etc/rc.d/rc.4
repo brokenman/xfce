@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+# rc.4		This file is executed by init(8) when the system is being
+#		initialized for run level 4.
+
+# Run X11 startup helper:
+pidof watch-xorg >/dev/null && sleep 4 || /opt/porteus-scripts/xorg/watch-xorg 2>/dev/null &
+
+# Start XFCE desktop:
+login=`egrep -o " login=[^ ]+*" /proc/cmdline | cut -dn -f2`
+[ "$login" ] && sed -i -r s/^.*autologin=.*$/autologin$login/g /etc/lxdm/lxdm.conf || sed -i -r s/^.*autologin=.*$/autologin=guest/g /etc/lxdm/lxdm.conf
+exec /usr/sbin/lxdm --with-ck-launch

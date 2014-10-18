@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<channel name="xfce4-power-manager" version="1.0">
+  <property name="xfce4-power-manager" type="empty">
+    <property name="presentation-mode" type="bool" value="false"/>
+    <property name="dpms-sleep-mode" type="string" value="Standby"/>
+    <property name="lock-screen-suspend-hibernate" type="bool" value="false"/>
+    <property name="power-button-action" type="uint" value="4"/>
+    <property name="critical-power-action" type="uint" value="4"/>
+  </property>
+</channel>

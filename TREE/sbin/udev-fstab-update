@@ -1,0 +1,77 @@
+#!/bin/sh
+# Handle /etc/fstab entries and /mnt directories for removable devices
+# so they are mounted under /mnt directory.
+# This script is called by /etc/udev/rules.d/10-porteus-fstab-update.rules
+
+# Inspired by 'udev-fstab-update' from Slax 6.1.2 but rewritten from scratch
+# for Porteus by fanthom <fanthom@porteus.org> and Ahau <ahau@porteus.org>
+# Additions to show removable devices in some gnome file manager sidepanes
+# were added by brokenman.
+
+# Variables initialized by the udev environment:
+# $ACTION (add, change, remove)
+# $DEVNAME (device name including path)
+# $ID_FS_TYPE (filesystem type)
+
+# Exit if called during boot:
+ps a | grep -q 'bash /etc/rc.d/rc.S' && exit
+
+# Exit if 'nohd' cheatcode is used:
+egrep -qo " nohd( |\$)" /proc/cmdline && exit
+
+# Our variables:
+FSTAB=/etc/fstab
+DEVICE=`echo $DEVNAME | sed s_^/dev/__`
+MNTPT=/mnt/$DEVICE
+FS=$ID_FS_TYPE
+[ "$FS" ] || FS=`/sbin/blkid $DEVNAME | egrep -o ' TYPE=[^ ]+' | cut -d'"' -f2`
+cdtest=`echo $DEVICE | grep ^sr`
+isrem=`grep 1 /sys/block/$(echo ${DEVICE%%[0-9]*})/removable`
+[ "$cdtest" ] && GVICON=',comment=x-gvfs-icon=media-optical'
+[ $isrem ] && REMD=',comment=x-gvfs-icon=drive-removable-media'
+
+
+fstab_add() {
+# Create the mount point:
+test ! -d $MNTPT && mkdir $MNTPT
+# Create new entry as per the 'mopt=' cheatcode or porteus defaults:
+MOPT=`egrep -o " mopt=[^ ]+" /proc/cmdline | cut -d= -f2`
+[ $MOPT ] || MOPT="user,noatime,nodiratime,suid,dev,exec,async"
+test -e /lib/udev/rules.d/80-udisks2.rules && MOPT="$MOPT,comment=x-gvfs-show$GVICON"
+[ $isrem ] && MOPT="$MOPT,comment=x-gvfs-show$REMD"
+if [ "$FS" = vfat ]; then echo "$DEVNAME $MNTPT vfat $MOPT,umask=0,check=s,utf8 0 0" >> $FSTAB
+elif [ "$FS" = ntfs ]; then echo "$DEVNAME $MNTPT ntfs-3g $MOPT 0 0" >> $FSTAB; chmod 777 $MNTPT
+else echo "$DEVNAME $MNTPT $FS $MOPT 0 0" >> $FSTAB
+fi
+}
+
+fstab_change() {
+# Change entry as per the 'mopt=' cheatcode or porteus defaults:
+MOPT=`egrep -o " mopt=[^ ]+" /proc/cmdline | cut -d= -f2`
+[ $MOPT ] || MOPT="user,noatime,nodiratime,suid,dev,exec,async"
+test -e /lib/udev/rules.d/80-udisks2.rules && MOPT="$MOPT,comment=x-gvfs-show$GVICON"
+[ $isrem ] && MOPT="$MOPT,comment=x-gvfs-show$REMD"
+if [ "$FS" = vfat ]; then sed -i "s_^$DEVNAME.*_$DEVNAME $MNTPT vfat $MOPT,umask=0,check=s,utf8 0 0_" $FSTAB; mkdir -p $MNTPT
+elif [ "$FS" = ntfs ]; then sed -i "s_^$DEVNAME.*_$DEVNAME $MNTPT ntfs-3g $MOPT 0 0_" $FSTAB; mkdir -p $MNTPT; chmod 777 $MNTPT
+elif [ "$FS" = swap ]; then sed -i "s_^$DEVNAME.*_$DEVNAME none swap sw,pri=1 0 0_" $FSTAB
+else sed -i "s_^$DEVNAME.*_$DEVNAME $MNTPT $FS $MOPT 0 0_" $FSTAB; mkdir -p $MNTPT
+fi
+}
+
+if [ "$ACTION" = add ]; then
+    # Add new entry:
+    [ "$FS" ] && fstab_add
+elif [ "$ACTION" = change ]; then
+    if grep -w "^/dev/$DEVICE" $FSTAB; then
+	# Change existing entry:
+	[ "$FS" ] && fstab_change
+    else
+	# Add new entry:
+	[ "$FS" ] && fstab_add
+    fi
+elif [ "$ACTION" = remove ]; then
+    # Delete fstab entry:
+    sed -i "/$DEVICE /d" $FSTAB
+    # Remove the mount point:
+    rmdir $MNTPT 2>/dev/null
+fi

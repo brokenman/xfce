@@ -1,0 +1,14 @@
+The following packages are required for some packages to compile:
+
+gobject-introspection-1.36.0
+gtk+3-3.8.2
+iso-codes-3.41-noarch
+python-2.7.5
+
+You can get these from the slackware-14.1 ISO.
+
+gtk3 is required for building gcr (which is required for network-manager-applet and gnome-keyring)
+gtk3 is required for building gnome-keyring (can be removed after compile)
+gobject-introspection and iso-codes is required for network-manager-applet
+
+Install them as needed and remove them when not needed.

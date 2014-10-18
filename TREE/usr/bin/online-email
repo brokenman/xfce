@@ -1,0 +1,25 @@
+#!/bin/bash
+
+## Open browser with popular email URL's
+## This script can be used as a replacement for defult email clients
+
+EMAILS="gmail.com hotmail.com outlook.com mlogin.yahoo.com mail.com inbox.com mail.zoho.com"
+BROWSERS="google-chrome-stable firefox opera iceweasel seamonkey torch maxthon avant deepnet"
+BDTOP=/usr/share/applications/browser.desktop
+
+
+
+## First check for browser.desktop file
+[ -e $BDTOP ] && BROWSER=`awk -F= '/Exec=/{print$NF}' $BDTOP |head -n1` || unset BROWSER
+
+## Check for existing browsers
+if [ -z "$BROWSER" ]; then
+	for a in $BROWSERS; do
+		[ type $a >/dev/null 2>&1 ] && { BROWSER=$a; break; }
+	done
+fi
+
+## If we still have no browser then die
+[ -z $BROWSER ] && exit 1
+
+$BROWSER $EMAILS

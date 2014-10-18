@@ -1,0 +1,409 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# Mark Krapivner, 2008.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-09-26 23:27+0200\n"
+"PO-Revision-Date: 2010-09-26 23:35+0200\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Hebrew\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../polkitgtk/polkitlockbutton.c:458
+msgid "Action Identifier"
+msgstr "מזהה פעולה"
+
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr "מזהה הפעולה לשימוש ללחצן"
+
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "מאומת"
+
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr "האם התהליך מאומת"
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "גלוי"
+
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "האם פריט התצוגה גלוי"
+
+#: ../polkitgtk/polkitlockbutton.c:507
+msgid "Can Obtain"
+msgstr "ניתן לקבל"
+
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr "האם ניתן לקבל אימות"
+
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr "טקסט שחרור"
+
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr "הטקסט שיופיע בעת בקשת השחרור מהמשתמש."
+
+#: ../polkitgtk/polkitlockbutton.c:525
+msgid "Click to make changes"
+msgstr "יש ללחוץ כדי לשנות"
+
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "עצת השחרור"
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "חלונית העצה שתופיע בעת בקשת השחרור מהמשתמש."
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "נדרש אימות כדי לבצע שינויים."
+
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr "טקסט נעילה"
+
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr "הטקסט שיופיע בעת בקשת הנעילה מהמשתמש."
+
+#: ../polkitgtk/polkitlockbutton.c:559
+msgid "Click to prevent changes"
+msgstr "יש ללחוץ כדי למנוע שינויים"
+
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "עצת הנעילה"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "חלונית העצה שתופיע בעת בקשת הנעילה מהמשתמש."
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "כדי למנוע שינויים נוספים, יש ללחוץ על נעילה."
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr "טקסט נעילה כללית"
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr "הטקסט שיופיע בעת בקשת נעילת הפעולות לכל המשתמשים."
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr "לחיצה לנעילה כללית"
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr "עצה לנעילה כללית"
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr "חלונית העצה שתופיע בעת ברשת נעילת הפעולות לכל המשתמשים."
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr "כדי למנוע ממשתמשים ללא הרשאות ניהול לבצע שינויים, יש ללחוץ על נעילה."
+
+#: ../polkitgtk/polkitlockbutton.c:626
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr "הטקסט שיוצר כאשר המשתמש לא יכול להשיג אישור דרך אימות."
+
+#: ../polkitgtk/polkitlockbutton.c:627
+msgid "Not authorized to make changes"
+msgstr "ללא הרשאה לביצוע שינויים"
+
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr "חלונית העצה שתוצג כאשר המשתמש לא יכול לקבל אישור באמצעות אימות."
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr "מדיניות המערכת מונעת שינויים. נא ליצור קשר עם מנהל המערכת."
+
+#: ../src/main.c:128
+msgid "Click the icon to drop all elevated privileges"
+msgstr "יש ללחוץ על הסמל כדי להשמיט את כל ההרשאות המיוחדות"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "בחירת משתמש..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:531
+msgid "_Authenticate"
+msgstr "_אימות"
+
+#: ../src/polkitgnomeauthenticationdialog.c:571
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות כאחד המשתמשים שלהלן כדי "
+"לבצע פעולה זאת."
+
+#: ../src/polkitgnomeauthenticationdialog.c:579
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr "היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות כדי לבצע פעולה זאת."
+
+#: ../src/polkitgnomeauthenticationdialog.c:585
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות כמנהל המערכת כדי לבצע פעולה "
+"זאת."
+
+#: ../src/polkitgnomeauthenticationdialog.c:620
+#: ../src/polkitgnomeauthenticator.c:298
+msgid "_Password:"
+msgstr "_ססמה:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:638
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_פרטים</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:691
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>פעולה:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:694
+#, c-format
+msgid "Click to edit %s"
+msgstr "יש ללחוץ לעריכת %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:708
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>ספק:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:710
+#, c-format
+msgid "Click to open %s"
+msgstr "יש ללחוץ לפתיחת %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:873
+msgid "Authenticate"
+msgstr "אימות"
+
+#: ../src/polkitgnomeauthenticator.c:294
+#, c-format
+msgid "_Password for %s:"
+msgstr "_ססמה עבור %s:"
+
+#: ../src/polkitgnomeauthenticator.c:454
+msgid "Authentication Failure"
+msgstr "שגיאת אימות"
+
+#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
+msgid "PolicyKit Authentication Agent"
+msgstr "סוכן האימות PolicyKit"
+
+#~ msgid "Authorizations"
+#~ msgstr "הרשאות"
+
+#~ msgid "Configure authorizations"
+#~ msgstr "הגדרת הרשאות"
+
+#~ msgid "Copyright © 2007 David Zeuthen"
+#~ msgstr "Copyright © 2007 David Zeuthen"
+
+#~ msgid "PolicyKit-gnome Website"
+#~ msgstr "PolicyKit-gnome Website"
+
+#~ msgid "PolicyKit-gnome demo"
+#~ msgstr "PolicyKit-gnome demo"
+
+#~ msgid "PolicyKit for the GNOME desktop"
+#~ msgstr "PolicyKit for the GNOME desktop"
+
+#~ msgid "_File"
+#~ msgstr "_קובץ"
+
+#~ msgid "_Actions"
+#~ msgstr "_פעולות"
+
+#~ msgid "_Help"
+#~ msgstr "_עזרה"
+
+#~ msgid "_Quit"
+#~ msgstr "י_ציאה"
+
+#~ msgid "Quit"
+#~ msgstr "יציאה"
+
+#~ msgid "_About"
+#~ msgstr "_אודות"
+
+#~ msgid "About"
+#~ msgstr "אודות"
+
+#~ msgid "Authenticating..."
+#~ msgstr "מאמת..."
+
+#~ msgid "Don't exit after 30 seconds of inactivity"
+#~ msgstr "Don't exit after 30 seconds of inactivity"
+
+#~ msgid "PolicyKit GNOME session daemon"
+#~ msgstr "PolicyKit GNOME session daemon"
+
+#~ msgid "Starting PolicyKit GNOME session daemon version %s"
+#~ msgstr "Starting PolicyKit GNOME session daemon version %s"
+
+#~ msgid "_Remember authorization for this session"
+#~ msgstr "_זכור הרשאה עבור הפעלה זו"
+
+#~ msgid "_Remember authorization"
+#~ msgstr "_זכור הרשאה"
+
+#~ msgid "For this _session only"
+#~ msgstr "עבור _הפעלה נוכחית בלבד"
+
+#~ msgid "<small><b>Application:</b></small>"
+#~ msgstr "<small><b>יישום:</b></small>"
+
+#~ msgid "_Password for root:"
+#~ msgstr "_סיסמה עבור מנהל המערכת:"
+
+#~ msgid "No"
+#~ msgstr "לא"
+
+#~ msgid "Yes"
+#~ msgstr "כן"
+
+#~ msgid ", "
+#~ msgstr ", "
+
+#~ msgid "A moment ago"
+#~ msgstr "לפני רגע"
+
+#~ msgid "1 minute ago"
+#~ msgstr "לפני דקה אחת"
+
+#~ msgid "%d minutes ago"
+#~ msgstr "לפני %d דקות"
+
+#~ msgid "1 hour ago"
+#~ msgstr "לפני שעה אחת"
+
+#~ msgid "%d hours ago"
+#~ msgstr "לפני %d שעות"
+
+#~ msgid "1 day ago"
+#~ msgstr "לפני יום אחד"
+
+#~ msgid "%d days ago"
+#~ msgstr "לפני %d ימים"
+
+#~ msgid "This session"
+#~ msgstr "הפעלה נוכחית"
+
+#~ msgid "Always"
+#~ msgstr "תמיד"
+
+#~ msgid "None"
+#~ msgstr "ללא"
+
+#~ msgid "_Show system users"
+#~ msgstr "_הצג משתמשי מערכת"
+
+#~ msgid "_None"
+#~ msgstr "_ללא"
+
+#~ msgid "Must be _in active session"
+#~ msgstr "חייב להיות _בהפעלה פעילה"
+
+#~ msgid "Must be on _local console"
+#~ msgstr "חייב להיות על מסוף _מקומי"
+
+#~ msgid "Must be in _active session on local console"
+#~ msgstr "חייב להיות בהפעלה _פעילה או על מסוף מקומי"
+
+#~ msgid "_Block..."
+#~ msgstr "_חסום..."
+
+#~ msgid "_Grant..."
+#~ msgstr "_הענק..."
+
+#~ msgid "<i>Anyone:</i>"
+#~ msgstr "<i>כל אחד:</i>"
+
+#~ msgid "<i>Console:</i>"
+#~ msgstr "<i>מסוף:</i>"
+
+#~ msgid "<i>Active Console:</i>"
+#~ msgstr "<i>מסוף פעיל:</i>"
+
+#~ msgid "_Modify..."
+#~ msgstr "_שינוי..."
+
+#~ msgid "<b>Action</b>"
+#~ msgstr "<b>פעולה</b>"
+
+#~ msgid "<i>Description:</i>"
+#~ msgstr "<i>תיאור:</i>"
+
+#~ msgid "<i>Vendor:</i>"
+#~ msgstr "<i>ספק:</i>"
+
+#~ msgid "_Edit..."
+#~ msgstr "_ערוך..."
+
+#~ msgid "Revert To _Defaults..."
+#~ msgstr "החזר ל_ברירת מחדל"
+
+#~ msgid "<b>Explicit Authorizations</b>"
+#~ msgstr "<b>הרשאות מוגדרות</b>"
+
+#~ msgid "Entity"
+#~ msgstr "ישות"
+
+#~ msgid "Scope"
+#~ msgstr "תחום"
+
+#~ msgid "How"
+#~ msgstr "איך"
+
+#~ msgid "Constraints"
+#~ msgstr "אילוצים"
+
+#~ msgid "_Revoke"
+#~ msgstr "_שלילה"
+
+#~ msgid "_Revoke..."
+#~ msgstr "_שלילה..."
+
+#~ msgid "Select an action"
+#~ msgstr "בחר פעולה"

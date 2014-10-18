@@ -1,0 +1,110 @@
+## Base libs
+at-spi2-core-2.8.0
+at-spi2-atk-2.8.1
+libsigc++-2.3.1
+glibmm-2.36.2
+atkmm-2.22.7
+cairomm-1.10.0
+pangomm-2.34.0
+gtkmm
+libwnck
+libxklavier
+libunique-1.1.6
+libevent-2.0.21
+gtksourceview-2.10.5
+dconf-0.15
+ca-certificates-20130906-noarch
+libtasn1-3.3
+p11-kit-0.16.4
+nettle
+gnutls
+intltool # Not needed
+gsettings-desktop-schemas # Not needed
+glib-networking # Not needed
+eudev - http://dev.gentoo.org/~blueness/eudev/eudev-1.9.tar.gz ## Not needed
+udisks2
+libsoup
+libsecret
+gvfs
+gmtk-1.0.8.1
+polkit-gnome # Having trouble because it needs gtk3 (32bit)
+svgalib
+v4l-utils
+
+## Base xfce4
+xfce4-dev-tools
+libxfce4util
+garcon
+xfconf
+libxfcegui4 # Not needed
+libxfce4ui
+exo
+xfce4-panel
+gtk-xfce-engine
+thunar
+thunar-volman
+xfwm4
+xfdesktop
+xfce4-appfinder
+xfce4-session
+xfce4-settings
+xfwm4-themes # Not needed
+xfce4-mixer # Not needed (replaced by volumeicon)
+mousepad
+orage # Not needed
+xfce4-terminal
+xfce4-power-manager
+tumbler
+
+## Goodies xfce
+thunar-archive-plugin (make sure p7zip is already installed/compiled)
+xfce4-clipman-plugin
+xfce4-cpufreq-plugin
+xfce4-mailwatch-plugin
+xfce4-mount-plugin
+xfce4-mpc-plugin
+xfce4-netload-plugin
+xfce4-notifyd
+xfce4-screenshooter
+xfce4-taskmanager
+xfce4-xkb-plugin
+
+
+## apps
+
+# network-manager-applet
+libsecret
+gcr (gtk3 required for building)
+libgnome-keyring
+gnome-keyring (gtk3 required for building)
+network-manager-applet (gobject-introspection and iso-codes required for building)
+
+# Audacious
+mpg123
+audacious
+audacious-plugins
+
+# mplayer
+MPlayer
+gnome-mplayer
+
+# epdfviewer
+openjpeg
+poppler
+epdfviewer
+
+# Transmission
+openldap-client (already compiled)
+transmission
+
+# xfburn
+libburn
+libisofs
+xfburn
+
+galculator
+gigolo
+gpatred
+gpicview
+slock
+volumeicon

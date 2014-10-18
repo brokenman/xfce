@@ -1,0 +1,41 @@
+## IMPORTANT ##
+Keep the directory structure exactly as it is. The scripts rely on this.
+They will create a 'build' directory and an 'export' directory as needed.
+
+## Compiling
+Download an existing Porteus XFCE desktop and boot into copy2ram with 05-devel.xzm activated.
+Follow the build order in DOCS/build-order.txt
+The SRC folder contains all the source files required (there are some extra unrequired sources)
+The PKG folder contains the slackware packages. After compiling in SRC the final package goes in PKG.
+I have kept the PKG folder ordered so you can see what packages are dependencies of an application.
+
+All slackbuilds have the appropriate configure arguments to build.
+Build time dependencies can be found in DOCS/buildtime-dependencies.txt
+Only install build dependencies as they become required. Remove after compiling.
+Sometimes gtk+3 or gobject-introspection needs to be installed just to build the package. It should not be included in the final ISO.
+Compiled packages land in /tmp or in the same directory where you are compiling. After compiling move the package into the PKG folder.
+
+## Building the desktop
+Once your packages are ready in PKG then you can begin building.
+Change into the base folder containing the script xfce-build.sh and run it: sh xfce-build.sh.
+It will install all packages and modules in the PKG directory into the build directory.
+It will then copy all files from the TREE into build. It will then run the cleanup script
+and produce a final 003-xfce.xzm module in the base directory.
+
+## Caches
+When testing you MUST boot into text mode (append 3 to the boot line) and run /usr/bin/p_cache as root which is a cache script
+in order to generate the required caches. If not the desktop won't boot. It generates a module in
+/tmp/009-caches.xzm. MAKE SURE you merge this caches module with the final 003-xfce.xzm module before
+the final production ISO. The script you need to run is called p_cache and can be found 
+
+## Procedure for testing desktop
+1) Boot into text mode
+2) Log in as root
+3) run p_cache
+4) exit to guest
+5) startxfce4 --with-ck-launch 2>/tmp/out
+
+This allows all runtime errors to be logged to /tmp/out. You can check it for any serious errors.
+There is a useful script in /opt/porteus-scripts/changes-time. Open it and remove $changes/home and $changes/root.
+When you add something to the panel (for example) you can then run this script, choose a time frame, and it will copy
+all the files modified in this time to /root/changesxxxx. You can then see which files you need to copy into the TREE.

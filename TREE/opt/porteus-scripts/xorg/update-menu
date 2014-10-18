@@ -1,0 +1,6 @@
+#!/bin/sh
+# Update XFCE menu:
+
+echo "Updating XFCE menu: update-desktop-database"
+for x in `ps -C xfce4-session -o user=`; do su $x -p -c "xfce4-panel -r"; done
+update-desktop-database

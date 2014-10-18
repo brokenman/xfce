@@ -1,0 +1,51 @@
+--- a/usr/bin/gnsu	2013-11-12 14:53:18.000000000 +0000
++++ b/usr/bin/gnsu	2013-12-09 21:15:43.769984449 +0000
+@@ -45,21 +45,35 @@
+ }
+ 
+ askpass() {
+-	MSG=$( eval_gettext "Please enter the\npassword for $u:" )
++	export MSG="Enter the password for ROOT:"
+ 	if [ $COUNT -lt $PASSWORDTRIES ]; then
+-		MSG="$( eval_gettext "Permission denied" )\n\n$MSG"
++		MSG="Permission denied. Please try again."
+ 	fi
+-	GNSU_PASSWORD=$( yad \
+-		--window-icon=$ICON \
+-		--image=$ICON \
+-		--text="$MSG" \
+-		--hide-text \
+-		--entry 2> /dev/null)
+-	retval=$?
+-	if [ $retval -ne 0 ]; then
+-		exit 0
+-	fi
+-	export GNSU_PASSWORD
++POUTPUT=$(echo '<window window_position="1" title="Porteus password" icon-name="lock" allow-shrink="false" allow-grow="false">
++<vbox>
++ <hbox>
++  <pixmap>
++   <width>32</width>
++   <input file>"/usr/share/pixmaps/porteus/encrypt.png"</input>
++  </pixmap>
++  <text wrap="true"><label>"'$MSG'"</label></text>
++ </hbox>
++		<hbox>
++			<text><label>Password:</label></text>
++			<entry activates_default="true" visibility="false" invisible-char="120" tooltip-text="Enter password for ROOT.">
++				<default>""</default>
++				<variable>pw</variable>
++			</entry>
++		</hbox>
++ <hbox>
++  <button cancel></button>
++  <button can-default="true" has-default="true" use-stock="true" label="gtk-ok"></button>
++ </hbox>
++</vbox>
++</window>'|gtkdialog -s)
++if [ `egrep -o "Cancel|abort" <<<$POUTPUT` ]; then exit; fi
++GNSU_PASSWORD=`grep pw <<<$POUTPUT|awk -F'"' '{print$2}'`
++export GNSU_PASSWORD
+ }
+ 
+ trypass() {

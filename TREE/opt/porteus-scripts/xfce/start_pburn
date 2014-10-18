@@ -1,0 +1,10 @@
+#!/bin/bash
+#simple script to start pburn unless there is already an instance running
+
+checkrun=`ps u | grep -v grep| grep -w /usr/bin/pburn`
+
+if [ "$checkrun" == "" ]; then
+  pburn
+fi
+
+exit

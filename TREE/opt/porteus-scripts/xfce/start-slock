@@ -1,0 +1,143 @@
+#!/bin/bash
+
+# this script acts as a wrapper and a gui warning to let users know that
+# slock will not give them a warning dialog
+
+if [ ! -e ~/.slock_no_warn ]; then
+  
+  . /usr/lib/librokenman
+  
+  exec 2>/dev/null
+  
+  #find the real location of this script, to edit it later
+  scriptloc=`readlink -f $0`
+  
+  ## Variables
+  export SW="/tmp/sw_$$"
+  export PIXMAPS=/usr/share/pixmaps/porteus
+  
+  mkdir -p $SW
+  
+  ## Is user using changes= ?
+  grep "changes=" /proc/cmdline && using_changes=1 || unset using_changes
+
+
+  export SLOCKWARN='
+<window window_position="1" title="Lock Screen?" icon-name="lock" allow-shrink="false" width-request="500" height-request="350">
+<vbox margin="10">
+  <hbox>
+  <pixmap><height>64</height><width>64</width><input file icon="lock"></input></pixmap>
+    '`txtcolor 300 darkred x-large normal "            Slock Screenlocker"`'
+  </hbox>
+    '`hsep`'
+    <frame Notice:>
+      <hbox>
+      <text xalign="0" wrap="true" width-request="450"><label>"
+You (or some system function) invoked '\'slock\''.  Slock is a simple screen locker.
+
+Press OK to lock your screen.  To unlock it, simply type the password for the user that locked the screen then press enter.  
+"</label>        
+      </text>
+      </hbox>
+      <hbox>
+      '`txtcolor 450 red medium normal "You will not see a prompt for your password!  The screen will turn blue when you start typing and remain blank until you type the correct password and press enter.
+      "`'
+     </hbox>
+     <hbox>
+     <checkbox active="false">
+		<label>"Do not show this message again"</label>
+		<variable>NOSHOW</variable>
+		<action>if true echo do_not_show > $SW/dump</action>
+		<action>if false 0 > $SW/dump</action>
+		</checkbox>
+      <text xalign="0" wrap="true" width-request="175"><label>""</label>        
+      </text>
+      </hbox>
+    </frame>
+  <hbox>
+    <button ok>
+        <variable>OKBUT</variable>
+        <sensitive>enabled</sensitive>
+    </button>
+    <button cancel>
+    </button>
+  </hbox>
+</vbox>
+<action signal="hide">exit:Cancel</action>
+</window>
+'
+gtkdialog -p SLOCKWARN > /tmp/.sw_dump
+
+## Did user cancel ?
+[ `egrep -o "Cancel|abort" /tmp/.sw_dump` ] && rm -rf $SW && rm /tmp/.sw_* && exit
+
+    if grep -q do_not_show $SW/dump; then
+    echo true > ~/.slock_no_warn
+  
+    ## prompt user to create a module
+    if [ "using_changes" != "1" ]; then
+
+export ASK_ME='
+'`start_window "Yes or no" cdr 450`'
+  <frame>
+    <hbox>
+      '`pixmapstock gtk-dialog-question`'
+      <text use-markup="true" width-request="375" selectable="true" can-focus="no">
+      <label>"You do not appear to be saving your Porteus changes. Would you like to create a module to remember this selection for all users?"</label></text>
+  </hbox>
+  </frame>
+  <hbox>
+    '`butyes`'
+    '`butno`'
+  </hbox>
+'`end_window`'
+'
+      for a in `gtkdialog -p ASK_ME`; do
+        if [ `egrep -o "Yes|yes" <<<$a` ]; then
+          answ=yes
+            else
+          unset answ
+        fi
+      done
+  
+      if [ "$answ" == "yes" ]; then
+          unset answ
+          
+          echo >> $SW/build_mod << EOF '
+          #!/bin/bash
+          
+          . /usr/lib/librokenman
+          
+          ## Can we see modules folder?
+          modf=`ls -l /mnt/live/porteus/modules|awk '\'{print'$NF'}\''`
+          [ -w $modf ] && mods=${modf} || unset mods modf
+          if [ "$mods" ]; then
+            mkdir -p '"$SW/fakeroot/root"'
+            echo true > '"$SW/fakeroot/root/.slock_no_warn"'
+            for a in `ls /home/`; 
+            do mkdir -p '"$SW/fakeroot/home/"'$a 
+            echo true > '"$SW/fakeroot/home/"'$a/.slock_no_warn
+            chown -R $a:$a $SW/fakeroot/home/$a
+            done;
+            mksquashfs '"$SW/fakeroot/"' $mods/no_slock_warning.xzm -b 256K -Xbcj x86 -noappend
+            gtk_message "Your no_slock_warning.xzm module will now be activated when you boot Porteus.  Press OK to lock your screen now." 450 gtk-yes
+          else
+            mksquashfs '"$SW/fakeroot/"' /tmp/no_slock_warning.xzm -b 256K -Xbcj x86 -noappend
+            gtk_message "Your porteus/modules folder was not found or is unwritable. Please copy the file /tmp/no_slock_warning.xzm into the modules folder or base folder.  Press OK to lock your screen now." 500 gtk-no
+          fi  
+            '
+EOF
+          
+          chmod +x $SW/build_mod
+          /opt/porteus-scripts/xorg/psu $SW/build_mod
+      fi
+    fi
+  
+  fi
+  
+  rm -rf $SW && rm /tmp/.sw_*
+fi
+
+/usr/bin/slock-binary &
+xset dpms force off
+exit

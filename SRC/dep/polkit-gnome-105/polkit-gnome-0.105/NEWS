@@ -1,0 +1,725 @@
+==========
+polkit-gnome 0.105
+==========
+
+This is polkit-gnome version 0.105.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-3.0  >= 3.0
+
+Changes since 0.104:
+
+Andika Triwidada (1):
+      Added Indonesian translation
+
+Daniel Nylander (1):
+      Updated Swedish translation
+
+David Zeuthen (1):
+      Update NEWS for release
+
+Javier Jardón (5):
+      build: Do not use GNOME_COMMON_INIT
+      configure.ac: Use maintainer mode by default
+      configure.ac: Do not use GNOME_MAINTAINER_MODE_DEFINES macro
+      configure.ac: Do not use deprecated macros
+      configure.ac: Use new libtool syntax
+
+Matthias Clasen (3):
+      Updates
+      Bump version to 0.105
+      Updates
+
+Michael Biebl (3):
+      Remove obsolete configure checks
+      Using the generic marshaller from GLib requires GLib >= 2.30
+      Fix typo in glib-2.0 configure check
+
+Seong-ho, Cho (1):
+      Added Korean translation
+
+
+Thanks to our contributors.
+
+David Zeuthen,
+October 27, 2011
+
+==========
+polkit-gnome 0.104
+==========
+
+This is polkit-gnome version 0.104.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-3.0  >= 3.0
+
+Changes since 0.103:
+
+Andika Triwidada (1):
+      Added Indonesian translation
+
+Carles Ferrando (1):
+      [l10n]Updated Catalan (Valencian) translation
+
+Daniel Nylander (1):
+      Updated Swedish translation
+
+David Zeuthen (1):
+      Post-release version bump to 0.104
+
+Gianvito Cavasoli (1):
+      l10n: Updated Italian translation
+
+Gil Forcada (1):
+      [l10n]Updated Catalan translation
+
+Inaki Larranaga Murgoitio (1):
+      Updated Basque language
+
+Olav Vitters (1):
+      add download link to doap file
+
+Thanks to our contributors.
+
+Matthias Clasen,
+October 17, 2011
+
+==========
+polkit-gnome 0.103
+==========
+
+This is polkit-gnome version 0.103.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-3.0  >= 3.0
+
+Changes since 0.102:
+
+Alexandre Franke (2):
+      Fix typo
+      Add DOAP and drop MAINTAINERS file
+
+David Zeuthen (3):
+      Post-release version bump to 0.103
+      Fix make distcheck
+      Update NEWS for release
+
+Matthias Clasen (4):
+      Drop polkit-gtk
+      configure.ac: Drop a duplicated section
+      Drop --with-gtk=2.0|3.0
+      Drop marshaller complications
+
+Thanks to our contributors.
+
+David Zeuthen,
+Sep 19, 2011
+
+==========
+polkit-gnome 0.102
+==========
+
+This is polkit-gnome version 0.102.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-2.0  >= 2.17.1 OR gtk+-3.0
+
+Changes since 0.101:
+
+ Colin Walters (1):
+       configure: Use [enable] for AM_MAINTAINER_MODE
+
+ Matthias Clasen (1):
+       Use GtkBox instead of GtkHBox
+
+ David Zeuthen (3):
+       Post-release version bump to 0.102
+       Update NEWS for release
+       Don't default to maintainer-mode when building from tarballs
+
+Updated translations.
+
+Thanks to our contributors.
+
+David Zeuthen,
+Aug 16, 2011
+
+==========
+polkit-gnome 0.101
+==========
+
+This is polkit-gnome version 0.101.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-2.0  >= 2.17.1 OR gtk+-3.0
+
+Changes since 0.100:
+
+ David Zeuthen (7):
+       Post-release version bump to 0.101
+       Return error when authentication dialog is dismissed
+       Fix crashers if icons cannot be loaded
+       Don't use deprecated polkit API
+       Fix warnings with gcc 4.6
+       Update NEWS for release
+       Update POTFILES.in
+
+ Matthias Clasen (1):
+       Connect to the session bus
+
+Thanks to our contributors.
+
+David Zeuthen,
+March 3, 2011
+
+==========
+polkit-gnome 0.100
+==========
+
+This is polkit-gnome version 0.100.
+
+Build requirements
+
+ polkit    >= 0.97
+ gtk+-2.0  >= 2.17.1 OR gtk+-3.0
+
+Changes since 0.99:
+
+David Zeuthen (6):
+      Post-release version bump to 0.100
+      Make --with-gtk work with introspection
+      Nuke desktop file for autostart
+      Do not show internal polkit.* detail key/value pairs
+      Update NEWS for release
+      Fix 'make distcheck'
+
+Matthias Clasen (6):
+      Add gnome-authentication-agent-1.desktop.in to POTFILES.skip
+      Don't use a status icon for temporary authorizations
+      Use avatar-default instead of stock_person
+      Don't use gtk_dialog_set_has_separator
+      Don't use gtk_widget_hide_all
+      Add a --with-gtk configure option
+
+Thanks to our contributors.
+
+David Zeuthen,
+February 21, 2011
+
+==========
+polkit-gnome 0.99
+==========
+
+This is polkit-gnome version 0.99.
+
+Build requirements
+
+ polkit    >= 0.97
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.98:
+
+ David Zeuthen (5):
+       Post-release version bump to 0.98
+       Fix wrong date in NEWS file
+       Fix up --string-prefix usage to work with latest gobject-introspection
+       Bump version to 0.99
+       Update NEWS for release
+
+David Zeuthen,
+September 15, 2010
+
+==========
+polkit-gnome 0.97
+==========
+
+This is polkit-gnome version 0.97
+
+Build requirements
+
+ polkit    >= 0.97
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.96:
+
+Andre Klapper (1):
+      Compile with -DGSEAL_ENABLE. Fixes bug 616386.
+
+David Zeuthen (8):
+      Fix build
+      Remove lock down functionality
+      Require polkit 0.97
+      Update NEWS for release
+      Post-release version bump to 0.97
+      Port from dbus-glib to gdbus
+      Silence the build
+      Avoid deprecated polkit_authority_get() function
+
+Martin Pitt (1):
+      Hide the agent autostart desktop file
+
+Matthias Clasen (1):
+      Use standard icon names
+
+David Zeuthen,
+August 9, 2010
+
+==========
+polkit-gnome 0.96
+==========
+
+This is polkit-gnome version 0.96.
+
+Build requirements
+
+ polkit    >= 0.95
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.95:
+
+David Zeuthen (3):
+      Fix bug with authenticating multiple possible users
+      Post-release version bump to 0.96
+      Update NEWS for release
+
+Translations:
+
+ Aron Xu, Gianvito Cavasoli, Gil Forcada, Jorge González, Matej Urbančič
+
+David Zeuthen,
+January 15, 2010
+
+==========
+polkit-gnome 0.95
+==========
+
+This is polkit-gnome version 0.95.
+
+Build requirements
+
+ polkit    >= 0.95
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.94:
+
+Chris Coulson (1):
+      Set status icon invisible before unref'ing it
+
+David Zeuthen (9):
+      Post-release version bump to 0.95
+      Add test-case for fd.o bug 23867
+      Add support for locking down actions
+      Add GObject Introspection for libpolkit-gtk-1
+      In the example, print backend details on stdout
+      Fix distcheck
+      Support multiple outstanding authentication requests
+      Use new API in polkit 0.95 for lock down
+      Update NEWS for release
+
+Translations:
+
+  AntÃ³nio Lima, Aron Xu, Christian Kirbach, Claude Paroz, Daniel
+  Nylander, Fran Dieguez, Gabor Kelemen, Gianvito Cavasoli, Inaki
+  Larranaga, Inaki Larranaga Murgoitio, Jorge GonzÃ¡lez, Khaled Hosny,
+  Leonardo Ferreira Fontenelle, Mads Lundby, Pavlos Tournaris, Petr
+  Kovar, Philip Withnall, Sweta Kothari, Takayuki KUSANO, Tao Wei,
+  Tomasz Dominikowski, Ville-Pekka Vainio
+
+
+David Zeuthen,
+November 13, 2009
+
+==========
+polkit-gnome 0.94
+==========
+
+This is polkit-gnome version 0.94.
+
+Build requirements
+
+ polkit    >= 0.94
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.93:
+
+David Zeuthen (5):
+      Post-release version bump to 0.94
+      Add libpolkit-gtk-1 with a PolkitLockButton widget
+      Make use of new API to better cope with one-shot authorizations
+      Clarify docs for PolkitLockButton
+      Update NEWS for release
+
+David Zeuthen,
+August 12, 2009
+
+==========
+polkit-gnome 0.93
+==========
+
+This is polkit-gnome version 0.93.
+
+Build requirements
+
+ polkit    >= 0.93
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.92:
+
+David Zeuthen (8):
+      Post-release version bump to 0.93
+      Fix desktop file
+      Nuke unused stuff
+      Bug 584847 – Get rid of libsexy, use new GtkLabel link support
+      Display a status icon if we have temporary authorizations
+      Bug 589150 – Install autostart desktop files in /etc/xdg/autostart
+      Require polkit version 0.93 since the API changed slightly
+      Update NEWS for release
+
+David Zeuthen,
+July 20th, 2009
+
+==========
+polkit-gnome 0.92
+==========
+
+This is PolicyKit-gnome version 0.92.
+
+Build requirements
+
+ PolicyKit >= 0.92
+ gtk+-2.0  >= 2.14
+
+Changes since 0.91:
+
+ David Zeuthen (9):
+      post release version bump to 0.92
+      Update for changes in PolicyKit API
+      Catch up with latest polkit API changes
+      Handle non-standard PAM stacks like fprintd
+      Bug 541945 – Parse gecos field (i.e. don't show username commas)
+      Change license to LGPLv2
+      Do not depend on EggDBus
+      Rip out stuff no longer needed for PolicyKit 1.0
+      Update NEWS
+
+David Zeuthen,
+June 8, 2009
+
+==========
+PolicyKit-gnome 0.9.2
+==========
+
+Released on August 20th 2008.
+
+Highlights of this release
+
+ o Don't rely on libsexy headers (Michael Biebl)
+
+Requirements for PolicyKit-gnome 0.9.2
+
+ - PolicyKit        == 0.9
+ - GTK+             >= 2.13.6
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - GConf            >= 2.8
+
+==========
+PolicyKit-gnome 0.9.1
+==========
+
+Released on August 19th 2008.
+
+Highlights of this release
+
+ o Avoid libsexy dep; ship with local copies of SexyURLLabel
+ o Avoid libgnome-vfs dep; use recent GTK+ instead
+ o Use standard icon names (Matthias Clasen)
+ o New translations: ar
+ o Updated translations: pt_BR, pt, ja, ar, pl
+
+Requirements for PolicyKit-gnome 0.9.1
+
+ - PolicyKit        == 0.9
+ - GTK+             >= 2.13.6
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - GConf            >= 2.8
+
+==========
+PolicyKit-gnome 0.9
+==========
+
+Release on July 22th 2008.
+
+Highlights of this release
+
+ o Bug fixes
+ o Avoid grabbing the pointer when showing dialog
+ o Remember state for "remember authorization" check box per action.
+ o New translations: ca, po, pt, ru, sk, cs, pt_BR, zh_CN, de
+
+Requirements for PolicyKit-gnome 0.9
+
+ - PolicyKit        == 0.9
+ - GTK+             >= 2.12
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - gnome-vfs        >= 2.4
+ - libsexy          >= 0.1.11
+ - GConf            >= 2.8
+
+==========
+PolicyKit-gnome 0.8
+==========
+
+Released on April 16th 2008.
+
+Highlights of this release
+
+ o  Bug fixes
+ o  Translations: el, en_GB, es, fi, fr, he, hu, ja, sv
+
+David Zeuthen (9):
+      post release version bump to 0.8
+      add support for new constraint types: exe and selinux_context
+      don't crash when showing block authorizations for a user without .face
+      use gtk_window_present() to show the dialog
+      fix a few g_warnings when handling icons
+      test commit
+      use gtk_window_present_with_time() to circumvent focus stealing prevention
+      comment out check for policy file until SCM situation is under control
+      merge translations from svn.gnome.org
+
+Michael Biebl (1):
+      make sure build works with -Wl,--as-needed
+
+Requirements for PolicyKit-gnome 0.8
+
+ - PolicyKit        == 0.8
+ - GTK+             >= 2.12
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - gnome-vfs        >= 2.4
+ - libsexy          >= 0.1.11
+
+==========
+PolicyKit-gnome 0.7
+==========
+
+Released on December 5th 2007.
+
+This is the fifth release of PolicyKit-gnome.
+
+Highlights of this release
+
+ o  Also listen on the new desktop-neutral session bus interface as
+    defined by PolicyKit
+    http://hal.freedesktop.org/docs/PolicyKit/model-authentication-agent.html
+
+ o  New libpolkit-gnome library with lots of cool features
+
+ o  New polkit-gnome-authorizations tool for managing authorizations
+
+ o  Support for vendor name, site and icon. The icon will be blended over
+    the south-east quarter of the lock icon
+
+ o  Various bug fixes
+
+David Zeuthen (65):
+      post-release version bump
+      grab the pointer and keyboard when showing an auth dialog
+      don't grab the X keyboard; only grab the X pointer
+      do grab the keyboard anyway
+      add infrastructure for building a library
+      forgot to add gtk-doc.make
+      first stab at subclassing GtkAction for the libpolkit-gnome library
+      add authentication convience function and make PolKitGnomeAction smarter
+      add a polkit_gnome_action_create_button() convenience method
+      remove functionality to pass the X11 XID in PolKitGnomeAction
+      pass XID for top-level of the widget that caused the ::activate signal
+      show labels in buttons created by polkit_gnome_action_create_button()
+      add signals for ::auth_start, ::auth_end on PolKitGnomeAction
+      make all setters of PolKitGnomeAction private
+      clean up the example, include it in inline docs and remove the helper
+      ref the PolKitAction when returning it as a property
+      in the example, unref the PolKitAction objects to plug memory leaks
+      require (unreleased) PolicyKit 0.7 instead of 0.5
+      update label for buttons created with polkit_gnome_action_create_button()
+      show an example of properties of PolKitGnomeAction can be overridden
+      also propagate the ::activate signal if PolicyKit says 'no'
+      update example
+      add support for the 'short-label' property in PolKitGnomeAction
+      add toolbar and menubar to the example
+      minor style / translation fixes for polkit-gnome-example
+      fixed some i18n issues with polkit-gnome-example
+      add documentation for the authentication daemon
+      add some warning flags from gcc and fix up some warnings
+      the auth daemon is not multi-threaded, no need to init threads
+      we don't use libgnome nor libgnomeui so don't check for it in configure.ac
+      separate library dependencies into separate pkg-config modules
+      clean TODO - yay, down to one single trivial entry
+      for PolKitGnomeAction define what happens if PolKitAction is set to NULL
+      assorted libpolkit-gnome fixes
+      fix description of the Kick actions in the example
+      add a "Manage Authorization" application
+      various fixed for PolKitGnomeAction
+      include png
+      new class PolKitGnomeToggleAction
+      include PolKitGnomeToggleAction and update a screenshot
+      use PolKitGnomeToggleAction in example
+      various work-in-progress bits for the authorization tool
+      update for recent changes on PolicyKit HEAD
+      add support for one-shot authorizations
+      update screenshots in docs
+      update to slightly modified iterator API in PolicyKit HEAD
+      update to gtk-doc.make to handle parallel builds
+      use a tree for the actions and their namespaces instead of a flat list
+      add support for grant, revoke and editing implicit authorizations
+      add notebook to avoid showing summary when an action isn't selected
+      add support for vendor and icon
+      pull in sexy and gnome-vfs for better presentation and handling of vendor url's
+      make auth dialog show a link to the auth manager and add a .desktop file
+      actually do single instance by refusing to run if we can't claim the Name
+      add support for negative auths
+      fix corner case for the toggle action
+      also claim the name org.freedesktop.PolicyKit.AuthenticationAgent
+      add support for "target-pid" property and streamline auth interface
+      fix up POLKIT_TYPE_GNOME_CONTEXT to be POLKIT_GNOME_TYPE_CONTEXT
+      update docs to reflect the interface switch from org.gnome to org.freedesktop
+      for negative auths, make the face bw to make the stop icon stand out
+      update to latest PolicyKit API changes
+      introduce new polkit-action-sufficient property
+      update for latest PolicyKit API changes
+      update NEWS file
+
+Requirements for PolicyKit-gnome 0.7
+
+ - PolicyKit        == 0.7
+ - GTK+             >= 2.12
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - gnome-vfs        >= 2.4
+ - libsexy          >= 0.1.11
+
+==========
+PolicyKit-gnome 0.6
+==========
+
+Released on October 11th 2007.
+
+This is the fourth release of PolicyKit-gnome. This release should be
+compatible with the PolicyKit-gnome 0.5 release.
+
+David Zeuthen (9):
+      post-release version bump
+      Revert "post-release version bump"
+      removed bogus aclocal.m4 file from repository
+      build example by default
+      post release bump to 0.6
+      fix heuristics for localizing PAM strings and support thinkfinger better
+      fix danish translations
+      exit authentication daemon after 30 seconds of inactivity
+      add a --no-exit option to polkit-gnome-manager
+
+Michael Biebl (1):
+      make it possible to build without the demo application
+
+Requirements for PolicyKit-gnome 0.6
+
+ - PolicyKit        == 0.6
+ - GTK+             >= 2.11 (2.10 will do if you don't build the demos)
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - libgnome         >= 2.14.0
+ - libgnome-ui      >= 2.14.0
+
+==========
+PolicyKit-gnome 0.5
+==========
+
+Released on August 31st 2007.
+
+This is the third release of PolicyKit-gnome. An incompatible change
+from the 0.4 release has been introduced; the signature of the method
+ShowDialog() has changed; it now takes an X11 window ID. Pass zero
+as the identifier if you don't have a window.
+
+David Zeuthen (12):
+      post-release version bump to version 0.5
+      fix up i18n framework and add Danish translations
+      fix make distcheck
+      put icons on buttons to signify whether the action is permitted
+      update to work with PolicyKit HEAD's support for <define_admin_auth/>
+      break the D-Bus by taking an X11 window ID
+      add en_CA translations
+      update to be compatible with PolicyKit HEAD
+      add an example of how annotations are used
+      update danish translations and remove en_CA translations
+      rename the session daemon from polkit-gnome to polkit-gnome-manager
+      update NEWS
+
+WARNING WARNING WARNING: do not use this software in a stable
+distribution; there are still security sensitive things that needs to
+be audited.
+
+Requirements for PolicyKit-gnome 0.5
+
+ - PolicyKit        == 0.5
+ - GTK+             >= 2.11
+ - dbus             >= 0.90
+ - dbus-glib        >= 0.71
+ - libgnome         >= 2.14.0
+ - libgnome-ui      >= 2.14.0
+
+==========
+PolicyKit-gnome 0.4
+==========
+
+Released on July 25th 2007.
+
+This is the second release of PolicyKit-gnome. 
+
+WARNING WARNING WARNING: do not use this software in a stable
+distribution; there are still security sensitive things that needs to
+be audited.
+
+Requirements for PolicyKit-gnome 0.4
+
+ - PolicyKit        == 0.4
+ - GTK+             >= 2.6
+ - dbus             >= 0.90
+ - dbus-glib        >= 0.71
+ - libgnome         >= 2.14.0
+ - libgnome-ui      >= 2.14.0
+
+==========
+PolicyKit-gnome 0.3
+==========
+
+Released on June 20th 2007.
+
+This is the first release of PolicyKit-gnome.
+
+WARNING WARNING WARNING: do not use this software in a stable
+distribution; there are still security sensitive things that needs to
+be audited.
+
+Requirements for PolicyKit-gnome 0.3
+
+ - PolicyKit        == 0.3
+ - GTK+             >= 2.6
+ - dbus             >= 0.90
+ - dbus-glib        >= 0.71
+ - libgnome         >= 2.14.0
+ - libgnome-ui      >= 2.14.0
+

@@ -1,0 +1,48 @@
+#!/bin/bash
+# Service menu script to upload to pastebin and display link
+# Requires wgetpaste and xclip
+# Author: Brokenman <brokenman@porteus.org>
+
+file=$1
+script="$(cd "${0%/*}" 2>/dev/null; echo "$PWD"/"${0##*/}")"
+name=${file##*/}
+
+. /usr/lib/librokenman
+
+message_good(){
+echo '
+'`start_window "Success" gtk-yes 500 0`'
+	<hbox>
+		'`pixmapstock gtk-yes`'
+		'`txtcolor 330 darkred x-large normal "Uploaded successfully"`'
+	</hbox>
+		'`hsep`'
+		<text selectable="true" width-request="470" wrap="true">
+			<label>'$1'</label>
+			<input file>/tmp/pastebin-link.tmp</input>
+		</text>
+'`end_window`'
+'|gtkdialog -s > /tmp/.message
+}
+
+message_bad(){
+echo '
+'`start_window "Fatal error" gtk-no 400 0`'
+	<hbox>
+		'`pixmapstock gtk-error`'
+		'`txtcolor 330 darkred x-large normal "$name was NOT uploaded"`'
+	</hbox>
+		'`hsep`'
+		'`txtmarkup 370 "There was an error uploading $name"`'
+     <timer milliseconds="true" visible="false">
+             <action>sleep 2</action>
+             <action type="exit">timedout</action>
+     </timer>
+'`end_window`'
+'|gtkdialog -s > /tmp/.message
+}
+
+cat $file | wgetpaste > /tmp/pastebin-link.tmp && message_good `cat /tmp/pastebin-link.tmp` \
+|| message_bad
+
+rm /tmp/.message /tmp/pastebin-link.tmp 2>/dev/null

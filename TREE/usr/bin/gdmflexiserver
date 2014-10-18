@@ -1,0 +1,2 @@
+#!/bin/sh
+/usr/sbin/lxdm -c USER_SWITCH

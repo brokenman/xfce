@@ -1,0 +1,58 @@
+#!/bin/sh
+# script by fanthom <fanthom@porteus.org>
+
+dir="/tmp/cache$$"
+
+# lib
+[ `uname -m` = x86_64 ] && suf=64
+
+# Set gdk-pixbuf version
+pbufver=`ls /usr/lib${suf}/gdk-pixbuf-2.0`
+
+echo "updating system cache..."
+# Update shared library links:
+/sbin/ldconfig
+# Update the X font indexes:
+/usr/bin/fc-cache -f 2>/dev/null
+# Update GTK+/gdk/pango cache's:
+/usr/bin/update-gtk-immodules 2>/dev/null
+/usr/bin/update-gtk-immodules-3.0 2>/dev/null
+/usr/bin/update-pango-querymodules 2>/dev/null
+/usr/bin/update-gdk-pixbuf-loaders 2>/dev/null
+# Update glib schemas:
+/usr/bin/glib-compile-schemas /usr/share/glib-2.0/schemas 2>/dev/null
+# Build GIO cache
+if [ `uname -m` != x86_64 ]; then
+    /usr/bin/gio-querymodules /usr/lib/gio/modules 2>/dev/null
+else
+    /usr/bin/gio-querymodules /usr/lib64/gio/modules 2>/dev/null
+fi
+# Update certificates
+[ -x /usr/sbin/update-ca-certificates ] && /usr/sbin/update-ca-certificates --fresh >/dev/null 2>&1
+# Update any existing icon cache files:
+for x in `find /usr/share/icons -name icon-theme.cache 2>/dev/null`; do
+    /usr/bin/gtk-update-icon-cache -t -f `dirname $x` > /dev/null 2>&1
+done
+# Update mime database:
+/usr/bin/update-mime-database /usr/share/mime >/dev/null 2>&1
+# Update desktop database:
+/usr/bin/update-desktop-database 2>/dev/null
+
+mkdir $dir
+cd /mnt/live/memory/changes/
+cp -af --parents etc/gtk-2.0/ $dir 2>/dev/null
+cp -af --parents etc/pango $dir 2>/dev/null
+cp -af --parents etc/ssl/certs $dir 2>/dev/null
+cp -af --parents etc/ld.so.cache $dir 2>/dev/null
+cp -af --parents usr/lib${suf}/gdk-pixbuf-2.0/$pbufver/loaders.cache $dir 2>/dev/null
+cp -af --parents usr/share/applications/mimeinfo.cache $dir 2>/dev/null
+cp -af --parents usr/share/glib-2.0/schemas/gschemas.compiled $dir 2>/dev/null
+cp -af --parents usr/lib${suf}/gio/modules/giomodule.cache $dir 2>/dev/null
+cp -af --parents usr/share/mime/ $dir 2>/dev/null
+cp -af --parents var/cache/fontconfig/*.cache-3 $dir 2>/dev/null
+cp -af --parents var/cache/ldconfig/aux-cache $dir 2>/dev/null
+
+dir2xzm $dir /tmp/009-caches.xzm >/dev/null
+rm -r $dir
+
+echo "all cache files have been merged into 009-caches.xzm, which has been placed in /tmp folder"

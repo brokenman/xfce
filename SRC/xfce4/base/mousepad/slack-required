@@ -1,0 +1,3 @@
+dbus >= 1.6.10
+gtk+2 >= 2.24.17
+gtksourceview >= 2.10.5

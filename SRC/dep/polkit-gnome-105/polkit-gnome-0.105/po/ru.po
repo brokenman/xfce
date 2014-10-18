@@ -1,0 +1,217 @@
+# translation of policykit-gnome.HEAD.ru.po to Russian
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Leonid Kanter <leon@asplinux.ru>, 2008.
+msgid ""
+msgstr ""
+"Project-Id-Version: policykit-gnome.HEAD.ru\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=policykit-gnome&component=general\n"
+"POT-Creation-Date: 2011-03-03 18:50+0000\n"
+"PO-Revision-Date: 2011-07-30 14:53+0300\n"
+"Last-Translator: Yuri Myasoedov <omerta13@yandex.ru>\n"
+"Language-Team: Russian <gnome-cyr@gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: ../polkitgtk/polkitlockbutton.c:458
+#| msgid "<i>Identifier:</i>"
+msgid "Action Identifier"
+msgstr "Идентификатор действия"
+
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr "Идентификатор действия, используемый для кнопки"
+
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "Авторизован"
+
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr "Является ли процесс авторизованным"
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "Видимый"
+
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "Является ли виджет видимым"
+
+#: ../polkitgtk/polkitlockbutton.c:507
+#| msgid "Obtained"
+msgid "Can Obtain"
+msgstr "Может получать"
+
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr "Может ли быть получена авторизация"
+
+#: ../polkitgtk/polkitlockbutton.c:523
+#: ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr "Разблокировать текст"
+
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr "Текст, появляющийся как предложения для разблокировки."
+
+#: ../polkitgtk/polkitlockbutton.c:525
+#| msgid "Click to make changes..."
+msgid "Click to make changes"
+msgstr "Щёлкните, чтобы измененить"
+
+#: ../polkitgtk/polkitlockbutton.c:540
+#: ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "Разблокировать всплывающую подсказку"
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "Всплывающая подсказка, появляющаяся как предложение для разблокировки."
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "Чтобы внести изменения, требуется аутентификация."
+
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr "Заблокировать текст"
+
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr "Текст, появляющийся как предложение для разблокировки."
+
+#: ../polkitgtk/polkitlockbutton.c:559
+msgid "Click to prevent changes"
+msgstr "Щёлкните, чтобы заблокировать изменения"
+
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "Заблокировать всплывающую подсказку"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "Всплывающая подсказка, появляющаяся как предложение для разблокировки."
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "Чтобы заблокировать будущие изменения, щёлкните по замку."
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr "Разблокировать текст"
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid "The text to display when prompting the user to lock down the action for all users."
+msgstr "Текст, появляющийся, когда пользователю предлагается разблокировать действие для всех пользователей."
+
+#: ../polkitgtk/polkitlockbutton.c:593
+#| msgid "Click to open %s"
+msgid "Click to lock down"
+msgstr "Щёлкните, чтобы заблокировать"
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr "Разблокировать всплывающую подсказку"
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid "The tooltip to display when prompting the user to lock down the action for all users."
+msgstr "Всплывающая подсказка, появляющаяся, когда пользователю предлагается разблокировать действие для всех пользователей."
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid "To prevent users without administrative privileges from making changes, click the lock."
+msgstr "Чтобы запретить пользователям без администраторских привилегий вносить изменения, щёлкните по замку."
+
+#: ../polkitgtk/polkitlockbutton.c:626
+msgid "The text to display when the user cannot obtain authorization through authentication."
+msgstr "Текст, появляющийся, когда пользователь не может получить авторизацию с помощью аутентификации."
+
+#: ../polkitgtk/polkitlockbutton.c:627
+#| msgid "Click to make changes..."
+msgid "Not authorized to make changes"
+msgstr "Для внесения изменений отсутствует авторизация"
+
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid "The tooltip to display when the user cannot obtain authorization through authentication."
+msgstr "Всплывающая подсказка, появляющаяся, когда пользователь не может получить авторизацию с помощью аутентификации."
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr "Системная политика блокирует изменения. Обратитесь к системному администратору."
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Выберите пользователя..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "_Аутентифицировать"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid "An application is attempting to perform an action that requires privileges. Authentication as one of the users below is required to perform this action."
+msgstr "Приложение пытается выполнить действие, которое требует дополнительных привилегий. Для выполнения этого действия необходима аутентификация под именем одного из перечисленных ниже пользователей."
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid "An application is attempting to perform an action that requires privileges. Authentication is required to perform this action."
+msgstr "Приложение пытается выполнить действие, которое требует дополнительных привилегий. Для выполнения этого действия требуется аутентификация."
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid "An application is attempting to perform an action that requires privileges. Authentication as the super user is required to perform this action."
+msgstr "Приложение пытается выполнить действие, которое требует дополнительных привилегий. Для выполнения этого действия необходима аутентификация пользователя root."
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
+msgid "_Password:"
+msgstr "_Пароль:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_Подробности</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Действие:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "Щёлкните, чтобы изменить %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Разработчик:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "Щёлкните, чтобы открыть %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "Аутентифицировать"
+
+#: ../src/polkitgnomeauthenticator.c:297
+#, c-format
+msgid "_Password for %s:"
+msgstr "_Пароль пользователя %s:"
+
+#: ../src/polkitgnomeauthenticator.c:457
+#| msgid "Authentication"
+msgid "Authentication Failure"
+msgstr "Сбой аутентификации"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "Пользователь отклонил диалог аутентификации"
+

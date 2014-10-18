@@ -1,0 +1,54 @@
+#!/bin/bash
+# Script to make partitions show in gnome style file managers
+# Author: brokenman <brokenman@porteus.org>
+
+
+showhelp(){
+echo
+echo "You should pass a partition or partition label"
+echo "to this script. See example below."
+echo
+echo "Usage: $0 sda8"
+echo "       $0 LABEL"
+echo
+exit
+}
+
+notfound(){
+echo
+echo "Partition not found"
+exit
+}
+
+[ -z $1 ] && showhelp
+egrep -q "\-h|\--h" <<<$1 && showhelp
+
+## Check for valid input
+if [ ! `grep ".d.[0-9]" <<<$1` ] && \
+[[ ! `blkid|grep "$1\""` ]]; then
+	showhelp
+fi 
+
+## Reduce argument to /dev/xdy
+blkout=`blkid|grep "LABEL=\"$1\""`
+devpart=`grep "$1 " /etc/fstab|awk '{print$1}'`
+if [ "$blkout" ]; then
+	xp=`echo $blkout|awk -F: '{print$1}'`
+elif [ "$devpart" ]; then
+	xp=$devpart
+else
+	unset xp
+fi
+
+## If xp does not exist the abort
+[ -z $xp ] && notfound
+
+## Reduce /dev/xdy to xdy
+xp=`echo $xp|cut -d'/' -f3`
+
+ops=`grep "$xp " /etc/fstab|cut -d' ' -f4`
+	
+[ "$ops" ] || notfound
+newops="$ops,x-gvfs-show"
+sed -i "/$xp / s/$ops/$newops/g" /etc/fstab
+echo done

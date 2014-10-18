@@ -1,0 +1,13 @@
+#!/bin/bash
+
+xtest=`ps aux|grep -v grep |grep /usr/bin/X`
+
+if [ "$xtest" != "" ]; then
+  setting=`xfconf-query -c xfce4-panel -p /panels/panel-1/position -v`
+  newset=`echo $setting|sed 's/p=[0-9]/p=2/g'`
+  xfconf-query -c xfce4-panel -p /panels/panel-1/position -s "$newset"
+else
+  for a in `find /home /root -name xfce4-panel.xml`; do
+    sed -i '/property name=\"panel-1"/,/\/property/s/property name=\"position\" type=\"string\" value=\"p=[0-9]/property name=\"position\" type=\"string\" value=\"p=2/g' $a;
+  done
+fi

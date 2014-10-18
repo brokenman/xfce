@@ -1,0 +1,18 @@
+Normally, skips reading of user configuration file when running with different effective UID.
+This patch adds the same behavior for GID.
+
+Author: Nalin Dahyabhai <nalin@redhat.com>
+
+diff --git a/libraries/libldap/init.c b/libraries/libldap/init.c
+index e6b17b4..fbf4829 100644
+--- a/libraries/libldap/init.c
++++ b/libraries/libldap/init.c
+@@ -678,7 +678,7 @@ void ldap_int_initialize( struct ldapoptions *gopts, int *dbglvl )
+ 	openldap_ldap_init_w_sysconf(LDAP_CONF_FILE);
+ 
+ #ifdef HAVE_GETEUID
+-	if ( geteuid() != getuid() )
++	if ( geteuid() != getuid() || getegid() != getgid() )
+ 		return;
+ #endif
+ 

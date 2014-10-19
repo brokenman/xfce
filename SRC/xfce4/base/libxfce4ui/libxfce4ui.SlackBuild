@@ -119,9 +119,12 @@ fi
 unset SB_GLADEUIOPTS
 [ "{SB_GLADEUI}" = "YES" ] || SB_GLADEUIOPTS='--disable-gladeui'
 
+# Check for autogen or configure
+[ -f autogen.sh ] && xconfig=autogen.sh || xconfig=configure
+
 CFLAGS="${SLKCFLAGS}" \
 CXXFLAGS="${SLKCFLAGS}" \
-./configure \
+./$xconfig \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc/xfce \

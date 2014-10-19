@@ -117,9 +117,12 @@ chmod -R u+w,go+r-w,a-s .
 
 # zcat ${CWD}/${NAME}.patch.gz | patch -p0 -E --backup --verbose || exit 1
 
+# Check for autogen or configure
+[ -f autogen.sh ] && xconfig=autogen.sh || xconfig=configure
+
 CFLAGS="${SLKCFLAGS}" \
 CXXFLAGS="${SLKCFLAGS}" \
-./configure \
+./$xconfig \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc/xfce \

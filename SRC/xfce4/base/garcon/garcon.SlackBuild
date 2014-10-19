@@ -113,9 +113,12 @@ if [ -r ${CWD}/apply-patches.sh ]; then
   . ${CWD}/apply-patches.sh
 fi
 
+# Check for autogen or configure
+[ -f autogen.sh ] && xconfig=autogen.sh || xconfig=configure
+
 CFLAGS="${SLKCFLAGS}" \
 CXXFLAGS="${SLKCFLAGS}" \
-./configure \
+./$xconfig \
   --prefix=/usr \
   --libdir=/usr/lib${LIBDIRSUFFIX} \
   --sysconfdir=/etc/xfce \

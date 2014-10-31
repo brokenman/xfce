@@ -144,6 +144,9 @@ echo "Removing old local headers and locales"
 rm -rf $exp/include/* 2>/dev/null
 rm -rf $exp/togo/locale/* 2>/dev/null
 
+## Fix some permissions
+chmod -x usr/share/themes/MediterraneanDarkest/gtk-2.0/assets/*
+
 # Set default perms, extract compressed files, strip debugging symbols:
 echo "Changing permissions..."
 find ./ -type d | xargs chmod -v 755 >/dev/null 2>&1

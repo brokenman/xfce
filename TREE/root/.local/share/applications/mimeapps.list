@@ -4,6 +4,8 @@ audio/x-mpegurl=gnome-mplayer.desktop;
 audio/x-scpls=gnome-mplayer.desktop;
 application/x-shellscript=lxterminal.desktop;
 x-content/blank-dvd=pburn.desktop;
+x-scheme-handler/http=exo-web-browser.desktop
+x-scheme-handler/https=exo-web-browser.desktop
 
 [Default Applications]
 x-scheme-handler/http=browser.desktop
@@ -57,3 +59,4 @@ x-content/video-bluray=gnome-mplayer.desktop
 x-content/video-hddvd=gnome-mplayer.desktop
 x-content/image-dcf=gpicview.desktop
 x-content/image-picturecd=gpicview.desktop
+

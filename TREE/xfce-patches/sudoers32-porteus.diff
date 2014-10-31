@@ -1,0 +1,24 @@
+--- a/etc/sudoers	2013-05-17 04:08:23.000000000 +0000
++++ b/etc/sudoers	2014-10-30 23:00:58.000000000 +0000
+@@ -61,6 +61,7 @@
+ # Defaults!/usr/bin/sudoreplay !log_output
+ # Defaults!/usr/local/bin/sudoreplay !log_output
+ # Defaults!/sbin/reboot !log_output
++Defaults rootpw
+ 
+ ##
+ ## Runas alias specification
+@@ -70,6 +71,8 @@
+ ## User privilege specification
+ ##
+ root ALL=(ALL) ALL
++guest ALL=(ALL) ALL
++guest ALL=(root) NOPASSWD: /usr/lib/xfce4/session/xfsm-shutdown-helper
+ 
+ ## Uncomment to allow members of group wheel to execute any command
+ # %wheel ALL=(ALL) ALL
+@@ -88,3 +91,4 @@
+ ## Read drop-in files from /etc/sudoers.d
+ ## (the '#' here does not indicate a comment)
+ #includedir /etc/sudoers.d
++## Restrictions applied to sudo

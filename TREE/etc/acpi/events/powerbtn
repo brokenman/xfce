@@ -1,0 +1,4 @@
+# /etc/acpi/events/power
+# This is called when the user presses the power button
+event=button/power (PWR.||PBTN)
+action=/sbin/poweroff

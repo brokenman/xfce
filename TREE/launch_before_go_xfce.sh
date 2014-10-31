@@ -38,11 +38,11 @@ rm etc/xdg/autostart/polkit-gnome-authentication-agent-1.desktop
 ## Create symlinks
 ln -sf /etc/X11/xinit/xinitrc.xfce etc/X11/xinit/xinitrc
 ln -sf /usr/sbin/lxdm usr/bin/lxdm
-ln -sf /usr/bin/gnsu usr/bin/gksu
-ln -sf /usr/bin/gnsu usr/bin/gnsudo
-ln -sf /usr/bin/gnsu usr/bin/ktsuss
+ln -sf /usr/bin/gksu usr/bin/gnsu
+ln -sf /usr/bin/gksu usr/bin/gksudo
+ln -sf /usr/bin/gksu usr/bin/ktsuss
 [ ! -d opt/porteus-scripts/xorg ] && mkdir -p opt/porteus-scripts/xorg
-ln -sf /usr/bin/gnsu opt/porteus-scripts/xorg/psu
+ln -sf /usr/bin/gksu opt/porteus-scripts/xorg/psu
 ln -sf /usr/bin/thunar opt/porteus-scripts/xorg/fmanager
 if [ "$SHARCH" = "64" ]; then
 	[ ! -e usr/lib64/libudev.so.1 ] && ln -sf /lib64/libudev.so.0.13.1 usr/lib64/libudev.so.1
@@ -100,6 +100,7 @@ find -L $icons -type l -delete
 find usr/share/icons -type f|xargs chmod -x 2>/dev/null
 
 # Apply porteus patches:
+[ "$SHARCH" = "64" ] && rm xfce-patches/sudoers32* || rm xfce-patches/sudoers64*
 for x in `find xfce-patches -type f`; do patch -p1 < $x; done
 rm -rf xfce-patches
 

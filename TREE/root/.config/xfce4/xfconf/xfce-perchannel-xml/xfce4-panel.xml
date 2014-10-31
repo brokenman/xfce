@@ -21,7 +21,7 @@
         <value type="int" value="4"/>
         <value type="int" value="5"/>
         <value type="int" value="6"/>
-        <value type="int" value="16"/>
+        <value type="int" value="2"/>
         <value type="int" value="17"/>
       </property>
     </property>
@@ -40,6 +40,7 @@
       <property name="names-visible" type="array">
         <value type="string" value="networkmanager applet"/>
         <value type="string" value="xfce4-power-manager"/>
+        <value type="string" value="volumeicon"/>
       </property>
     </property>
     <property name="plugin-1" type="string" value="whiskermenu"/>
@@ -59,11 +60,6 @@
         <value type="string" value="-logout"/>
         <value type="string" value="-logout-dialog"/>
       </property>
-    </property>
-    <property name="plugin-2" type="string" value="mixer">
-      <property name="sound-card" type="string" value="HDAIntelHDMIAlsamixer"/>
-      <property name="track" type="string" value=""/>
-      <property name="command" type="string" value="xfce4-mixer"/>
     </property>
     <property name="plugin-7" type="string" value="launcher">
       <property name="items" type="array">
@@ -86,5 +82,6 @@
         <value type="string" value="14063972125.desktop"/>
       </property>
     </property>
+    <property name="plugin-2" type="string" value="power-manager-plugin"/>
   </property>
 </channel>
